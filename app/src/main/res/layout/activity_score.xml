@@ -65,30 +65,30 @@
             android:src="@drawable/moneypig" />
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical"
-        android:weightSum="5">
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:weightSum="5">
 
-        <TextView
-            android:id="@+id/cashRewardTextID"
-            android:layout_width="348dp"
-            android:layout_height="31dp"
-            android:layout_weight="3"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:text="Rewards for every 100 points"
-            android:textAllCaps="true"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/cashRewardTextID"
+                android:layout_width="348dp"
+                android:layout_height="31dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Rewards for every 100 points"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/cashRewardDescID"
-            android:layout_width="348dp"
-            android:layout_height="44dp"
-            android:layout_weight="3"
-            android:paddingLeft="20dp"
-            android:text="You get shopping cash rewards of 100 USD at XXX store!!" />
+            <TextView
+                android:id="@+id/cashRewardDescID"
+                android:layout_width="348dp"
+                android:layout_height="44dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:text="You get shopping cash rewards of 100 USD at XXX store!!" />
 
         </LinearLayout>
     </LinearLayout>
@@ -109,7 +109,7 @@
             android:src="@drawable/giftimg" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:orientation="vertical"
@@ -128,7 +128,7 @@
 
             <TextView
                 android:id="@+id/giftDescID"
-                android:layout_width="348dp"
+                android:layout_width="350dp"
                 android:layout_height="44dp"
                 android:layout_weight="3"
                 android:paddingLeft="20dp"
