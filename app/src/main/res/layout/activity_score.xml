@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="BOB"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:src="@drawable/iconfinder_11_2694133" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary">
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="155dp"
+            android:layout_height="288dp"
+            android:layout_marginBottom="10dp"
+            android:progressDrawable="@drawable/donut_progress_bar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pointsID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="160dp"
+        android:text="30/100 points" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimary"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            android:paddingLeft="30dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/moneypig" />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/cashRewardTextID"
+            android:layout_width="348dp"
+            android:layout_height="31dp"
+            android:layout_weight="3"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="Rewards for every 100 points"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cashRewardDescID"
+            android:layout_width="348dp"
+            android:layout_height="44dp"
+            android:layout_weight="3"
+            android:paddingLeft="20dp"
+            android:text="You get shopping cash rewards of 100 USD at XXX store!!" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimary"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            android:paddingLeft="30dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/giftimg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/giftTextID"
+                android:layout_width="348dp"
+                android:layout_height="31dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Rewards for every 50 points"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/giftDescID"
+                android:layout_width="348dp"
+                android:layout_height="44dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:text="You now get 5% extra cash back on your credit card purchases!!" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
