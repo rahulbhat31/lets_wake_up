@@ -19,11 +19,12 @@
             android:layout_height="78dp"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="Hi Bob"
+            android:text="Hi rahul"
             android:textColor="#FFFFFF"
             android:textSize="50sp" />
 
         <ImageView
+            android:id="@+id/avatar"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_gravity="right"

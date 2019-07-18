@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
@@ -14,12 +15,15 @@ public class HomePage extends AppCompatActivity {
     Button global_warmning;
     Button water_pollution;
     Button water_crisis;
+    ImageView profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__page);
 
         String name = (String)getIntent().getStringExtra("Name");
+        profile = findViewById(R.id.avatar);
         nameView = findViewById(R.id.name);
         nameView.setText(name);
 
@@ -58,6 +62,13 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this, TopicVideoPage.class);
                 intent.putExtra("topic" ,"water_crisis");
+                startActivity(intent);
+            }
+        });
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, profile.class);
                 startActivity(intent);
             }
         });

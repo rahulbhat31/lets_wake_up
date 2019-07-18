@@ -17,11 +17,12 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="BOB"
+            android:text="rahul"
             android:layout_marginLeft="20dp"
             android:textSize="50sp"
             android:textColor="#FFFFFF"/>
         <ImageView
+            android:id="@+id/avatar"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_gravity="right"

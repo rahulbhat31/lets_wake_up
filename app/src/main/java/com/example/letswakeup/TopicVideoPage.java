@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -26,6 +27,7 @@ public class TopicVideoPage extends AppCompatActivity {
     private boolean mIsPaused = false;
     String topic;
     TextView typeText;
+    ImageView profile;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class TopicVideoPage extends AppCompatActivity {
         String global_save = "gUhxcdzRgLQ";
         String wat_poll_save = "sYIoPIstObU";
         String water_cri_save = "DgGlVqZkB8A";
+        profile = (ImageView)findViewById(R.id.avatar);
 
         typeText = (TextView) findViewById(R.id.typeTextID);
 
@@ -92,7 +95,16 @@ public class TopicVideoPage extends AppCompatActivity {
                 }
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TopicVideoPage.this, profile.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 
 }

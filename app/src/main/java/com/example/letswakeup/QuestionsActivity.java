@@ -22,12 +22,14 @@ public class QuestionsActivity extends AppCompatActivity {
     String responseText;
     ImageView rightAns;
     ImageView wrongAns;
+    ImageView profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
+        profile = (ImageView)findViewById(R.id.avatar);
         submitBtn = (Button) findViewById(R.id.submitBtnID);
         nextBtn = (Button) findViewById(R.id.nextBtnID);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroupID);
@@ -64,6 +66,14 @@ public class QuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(QuestionsActivity.this, GWGameSimulation1.class);
+                startActivity(intent);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(QuestionsActivity.this, profile.class);
                 startActivity(intent);
             }
         });

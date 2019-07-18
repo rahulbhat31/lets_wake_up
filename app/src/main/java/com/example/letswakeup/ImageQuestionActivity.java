@@ -2,6 +2,7 @@ package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class ImageQuestionActivity extends AppCompatActivity {
 
     ImageView rightAns;
     ImageView wrongAns;
-
+    ImageView profile;
     private boolean isChecking = true;
     private int mCheckedId;
 
@@ -25,6 +26,7 @@ public class ImageQuestionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_question);
+        profile = (ImageView)findViewById(R.id.avatar);
 
         mFirstGroup = (RadioGroup) findViewById(R.id.first_group);
         mSecondGroup = (RadioGroup) findViewById(R.id.second_group);
@@ -75,6 +77,13 @@ public class ImageQuestionActivity extends AppCompatActivity {
             }
         });
 
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ImageQuestionActivity.this, profile.class);
+                startActivity(intent);
+            }
+        });
 
 
 

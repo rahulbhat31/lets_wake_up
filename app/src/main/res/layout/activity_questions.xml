@@ -18,11 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="BOB"
+            android:text="rahul"
             android:textColor="#FFFFFF"
             android:textSize="50sp" />
 
         <ImageView
+            android:id="@+id/avatar"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_gravity="right"
