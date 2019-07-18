@@ -23,13 +23,14 @@ public class TopicVideoPage extends AppCompatActivity {
     Button get_quest;
     WebView mWebView;
     private boolean mIsPaused = false;
+    String topic;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic_video_page);
         String media_url = "https://www.youtube.com/watch?v=B-nEYsyRlYo";
-        String topic = getIntent().getStringExtra("topic");
+        topic = getIntent().getStringExtra("topic");
         WebView youtubeWebView = findViewById(R.id.youtube_web_view); //todo find or bind web view
         String env_save = "Vkq_srFGW5I";
         String global_save = "gUhxcdzRgLQ";
@@ -71,8 +72,17 @@ public class TopicVideoPage extends AppCompatActivity {
         get_quest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
-                startActivity(intent);
+
+                if(topic.equals("global_warming"))
+                {
+                    Intent intent = new Intent(TopicVideoPage.this, QuestionsActivity.class);
+                    startActivity(intent);
+                }
+                else if(topic.equals("env"))
+                {
+                    Intent intent = new Intent(TopicVideoPage.this, ImageQuestionActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

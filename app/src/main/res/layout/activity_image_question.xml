@@ -1,68 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/or">
-
-
+    android:background="@drawable/or"
+    tools:context=".ImageQuestionActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="0.5"
         android:background="#CC000000">
+
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Hi Bob"
+            android:layout_width="277dp"
+            android:layout_height="78dp"
             android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Hi Bob"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_gravity="right"
-            android:src="@drawable/iconfinder_11_2694133"/>
+            android:src="@drawable/iconfinder_11_2694133" />
 
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="300dp"
+        android:layout_weight="1.4"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviornment"
-            android:textSize="35sp"/>
+            android:textSize="35sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="How do u save our enviornment ?"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="1"
-            >
+            android:columnCount="1">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            <RadioGroup
+                android:id="@+id/first_group"
                 android:orientation="horizontal">
+
                 <RadioButton
+                    android:id="@+id/imgQuesOption_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"/>
+                    android:layout_marginTop="100dp" />
+
                 <ImageView
+                    android:id="@+id/imgID1"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_weight="1"
@@ -73,30 +80,33 @@
                     android:layout_height="50dp" />
 
                 <RadioButton
+                    android:id="@+id/imgQuesOption_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"/>
+                    android:layout_marginTop="100dp" />
 
                 <ImageView
+                    android:id="@+id/imgID2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="200dp"
+                    android:layout_weight="1"
                     android:src="@drawable/download" />
 
 
-            </LinearLayout>
+            </RadioGroup>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            <RadioGroup
+                android:id="@+id/second_group"
                 android:orientation="horizontal">
+
                 <RadioButton
+                    android:id="@+id/imgQuesOption_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"/>
-
+                    android:layout_marginTop="100dp" />
 
                 <ImageView
+                    android:id="@+id/imgID3"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_weight="1"
@@ -105,32 +115,56 @@
                 <Space
                     android:layout_width="50dp"
                     android:layout_height="50dp" />
+
                 <RadioButton
+                    android:id="@+id/imgQuesOption_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"/>
+                    android:layout_marginTop="100dp" />
 
                 <ImageView
+                    android:id="@+id/imgID4"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="200dp"
+                    android:layout_weight="1"
                     android:src="@drawable/plant_tree" />
 
-
-            </LinearLayout>
+            </RadioGroup>
 
         </GridLayout>
 
 
-
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center"
-        android:text="Submit Answer"/>
+        android:orientation="vertical"
+        android:layout_weight="1.6">
+
+        <Button
+            android:id="@+id/imgQuesSubmitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit" />
+
+
+        <ImageView
+            android:id="@+id/rightAnswerImgQuesID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/righttick" />
+
+        <ImageView
+            android:id="@+id/wrongAnswerImgQuesID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/wrongcross" />
+    </LinearLayout>
 
 </LinearLayout>

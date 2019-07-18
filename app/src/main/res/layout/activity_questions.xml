@@ -117,6 +117,14 @@
 
 
     </LinearLayout>
+    <Button
+        android:id="@+id/nextBtnID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="40dp"
+        android:text="Next" />
+
 
 
 </LinearLayout>
