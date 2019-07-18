@@ -23,14 +23,13 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ScoreActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ScoreActivity" >
         </activity>
     </application>
 
