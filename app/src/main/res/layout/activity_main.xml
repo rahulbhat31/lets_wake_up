@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_gravity="center"
-        android:text="Enter yours name"/>
+        android:hint="Enter yours name"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:text="Email Id"/>
+        android:hint="Email Id"/>
 
     <Button
         android:id="@+id/save"
