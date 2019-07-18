@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#CC000000">
+        android:background="@color/colorBrown">
 
         <TextView
             android:layout_width="wrap_content"

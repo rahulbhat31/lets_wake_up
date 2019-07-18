@@ -14,7 +14,6 @@ public class HomePage extends AppCompatActivity {
     Button global_warmning;
     Button water_pollution;
     Button water_crisis;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

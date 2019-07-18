@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_weight="0.5"
-        android:background="#CC000000">
+        android:background="@color/colorBrown">
 
         <TextView
             android:layout_width="277dp"
@@ -37,12 +37,6 @@
         android:layout_height="300dp"
         android:layout_weight="1.4"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enviornment"
-            android:textSize="35sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,6 +141,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorBrown"
+            android:textColor="@color/colorWhite"
             android:text="Submit" />
 
 

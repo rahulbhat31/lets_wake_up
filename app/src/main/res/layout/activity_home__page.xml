@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:background="#CC000000">
+        android:background="@color/colorBrown">
         <TextView
             android:id="@+id/name"
             android:layout_width="0dp"
@@ -38,29 +38,44 @@
     android:orientation="vertical">
     <Button
         android:id="@+id/env"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Enviornment"
         android:layout_gravity="center"
-        />
+        android:padding="20dp"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/colorBrown"
+        android:textColor="@color/colorWhite"/>
     <Button
         android:id="@+id/global_warming"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Global Warming"/>
+        android:text="Global Warming"
+        android:padding="20dp"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/colorBrown"
+        android:textColor="@color/colorWhite"/>
     <Button
         android:id="@+id/water_pollu"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Water Pollution"/>
+        android:text="Water Pollution"
+        android:padding="20dp"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/colorBrown"
+        android:textColor="@color/colorWhite"/>
     <Button
         android:id="@+id/water_cri"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Water Crisis"/>
+        android:text="Water Crisis"
+        android:padding="20dp"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/colorBrown"
+        android:textColor="@color/colorWhite"/>
 </LinearLayout>
 
 </LinearLayout>

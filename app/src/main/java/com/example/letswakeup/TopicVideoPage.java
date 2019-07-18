@@ -12,6 +12,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import java.lang.reflect.Method;
@@ -24,7 +25,7 @@ public class TopicVideoPage extends AppCompatActivity {
     WebView mWebView;
     private boolean mIsPaused = false;
     String topic;
-
+    TextView typeText;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,20 +38,26 @@ public class TopicVideoPage extends AppCompatActivity {
         String wat_poll_save = "sYIoPIstObU";
         String water_cri_save = "DgGlVqZkB8A";
 
+        typeText = (TextView) findViewById(R.id.typeTextID);
+
         if (topic.equals("env")){
             vid = env_save;
+            typeText.setText("ENVIRONMENT");
         }
 
         if (topic.equals("global_warming")){
+            typeText.setText("GLOBAL WARMING");
             vid = global_save;
         }
 
         if (topic.equals("water_pollution")){
             vid = wat_poll_save;
+            typeText.setText("WATER POLLUTION");
         }
 
         if (topic.equals("water_crisis")){
             vid = water_cri_save;
+            typeText.setText("WATER CRISIS");
         }
         youtubeWebView.setWebViewClient(new WebViewClient() {
             @Override
