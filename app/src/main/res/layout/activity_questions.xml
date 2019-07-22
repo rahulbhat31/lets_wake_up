@@ -31,12 +31,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/option1ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textQuestionID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -55,7 +55,7 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/option1ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -104,7 +104,7 @@
             android:textColor="@color/colorWhite"
             android:text="Submit" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/rightAnswerImgID"
             android:layout_width="76dp"
             android:layout_height="match_parent"
@@ -116,7 +116,28 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:visibility="gone"
-            app:srcCompat="@drawable/wrongcross" />
+            app:srcCompat="@drawable/wrongcross" />-->
+
+        <TextView
+            android:id="@+id/rightAnsStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Got it right!!"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/wrongAnsStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:visibility="gone"
+            android:textSize="35dp" />
 
 
     </LinearLayout>
@@ -127,6 +148,7 @@
         android:layout_marginLeft="140dp"
         android:layout_marginTop="20dp"
         android:text="Next"
+        android:visibility="gone"
         android:backgroundTint="@color/colorBrown"
         android:textColor="@color/colorWhite"/>
 

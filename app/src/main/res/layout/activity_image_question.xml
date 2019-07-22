@@ -40,6 +40,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/imgeTxtQuestionID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -49,82 +50,51 @@
 
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="1">
-
-            <RadioGroup
-                android:id="@+id/first_group"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/imgQuesOption_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp" />
-
-                <ImageView
-                    android:id="@+id/imgID1"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/a43h2m_0" />
-
-                <Space
-                    android:layout_width="50dp"
-                    android:layout_height="50dp" />
-
-                <RadioButton
-                    android:id="@+id/imgQuesOption_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp" />
-
-                <ImageView
-                    android:id="@+id/imgID2"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/download" />
+            android:columnCount="2"
+            android:layout_gravity="center">
 
 
-            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img1"
+                android:padding="10dp"
+                android:background="@drawable/whitebdg"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"/>
 
-            <RadioGroup
-                android:id="@+id/second_group"
-                android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img2"
+                android:padding="10dp"
+                android:background="@drawable/whitebdg"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
 
-                <RadioButton
-                    android:id="@+id/imgQuesOption_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp" />
+            <ImageButton
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/whitebdg"
+                android:padding="10dp" />
 
-                <ImageView
-                    android:id="@+id/imgID3"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/plastic" />
-
-                <Space
-                    android:layout_width="50dp"
-                    android:layout_height="50dp" />
-
-                <RadioButton
-                    android:id="@+id/imgQuesOption_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp" />
-
-                <ImageView
-                    android:id="@+id/imgID4"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/plant_tree" />
-
-            </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img4"
+                android:padding="10dp"
+                android:background="@drawable/whitebdg"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
 
         </GridLayout>
 
@@ -146,8 +116,19 @@
             android:textColor="@color/colorWhite"
             android:text="Submit" />
 
+        <Button
+            android:id="@+id/imgNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorBrown"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:text="Next" />
 
-        <ImageView
+
+
+        <!--<ImageView
             android:id="@+id/rightAnswerImgQuesID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,7 +142,30 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/wrongcross" />
+            app:srcCompat="@drawable/wrongcross" />-->
+
+
+        <TextView
+            android:id="@+id/rightImgAnsStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Got it right!!"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/wrongImgAnsStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:visibility="gone"
+            android:textSize="20dp" />
+
     </LinearLayout>
 
 </LinearLayout>

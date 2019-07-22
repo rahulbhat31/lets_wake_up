@@ -37,7 +37,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this, TopicVideoPage.class);
-                intent.putExtra("topic" ,"env");
+                intent.putExtra("topic" ,getString(R.string.environment));
                 startActivity(intent);
             }
         });
@@ -45,7 +45,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this, TopicVideoPage.class);
-                intent.putExtra("topic" ,"global_warming");
+                intent.putExtra("topic", getString(R.string.global_warming));
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this, TopicVideoPage.class);
-                intent.putExtra("topic" ,"water_pollution");
+                intent.putExtra("topic", getString(R.string.water_pollution));
                 startActivity(intent);
             }
         });
@@ -61,7 +61,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomePage.this, TopicVideoPage.class);
-                intent.putExtra("topic" ,"water_crisis");
+                intent.putExtra("topic", getString(R.string.water_crisis));
                 startActivity(intent);
             }
         });

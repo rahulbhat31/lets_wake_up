@@ -1,3 +1,71 @@
 <resources>
     <string name="app_name">Lets wake up</string>
+
+    <string name="env_ques_no">com.example.letswakeup.environmentquestionno</string>
+    <string name="water_poll_ques_no">com.example.letswakeup.waterpollutionquestionno</string>
+    <string name="water_crisis_ques_no">com.example.letswakeup.watercrisiquestionno</string>
+    <string name="global_warming_ques_no">com.example.letswakeup.globalwarmingquestionno</string>
+
+    <string name="img_env_ques_no">com.example.letswakeup.imgenvironmentquestionno</string>
+    <string name="img_water_poll_ques_no">com.example.letswakeup.imgwaterpollutionquestionno</string>
+    <string name="img_water_crisis_ques_no">com.example.letswakeup.imgwatercrisiquestionno</string>
+    <string name="img_global_warming_ques_no">com.example.letswakeup.imgglobalwarmingquestionno</string>
+
+    <string name="env_score">com.example.letswakeup.environmentscore</string>
+    <string name="water_pollution_score">com.example.letswakeup.waterpollutionscore</string>
+    <string name="water_crisis_score">com.example.letswakeup.waterscrisisscore</string>
+    <string name="global_warming_score">com.example.letswakeup.globalwarmingscore</string>
+    <string name="total_score">com.example.letswakeup.totalscore</string>
+
+    <string name="question_type">com.example.letswakeup.questiontype</string>
+
+    <string name="environment">Environment</string>
+    <string name="water_pollution">Water Pollution</string>
+    <string name="global_warming">Global Warming</string>
+    <string name="water_crisis">Water Crisis</string>
+
+
+    <string-array name="env_question">
+        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
+        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
+        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+    </string-array>
+    <string-array name="water_pollution_question">
+        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
+        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
+        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+    </string-array>
+    <string-array name="water_crisis_question">
+        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
+        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
+        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+    </string-array>
+    <string-array name="global_warming_question">
+        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
+        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
+        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+    </string-array>
+
+
+    <string-array name="img_env_question">
+        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
+    </string-array>
+    <string-array name="img_water_pollution_question">
+        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
+    </string-array>
+    <string-array name="img_water_crisis_question">
+        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
+    </string-array>
+    <string-array name="img_global_warming_question">
+        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
+    </string-array>
+
 </resources>
