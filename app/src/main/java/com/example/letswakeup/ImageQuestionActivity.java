@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ImageQuestionActivity extends AppCompatActivity {
+public class ImageQuestionActivity extends AppCompatActivity{
 
     private RadioGroup mFirstGroup;
     private RadioGroup mSecondGroup;
@@ -178,11 +178,15 @@ public class ImageQuestionActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    Drawable bgwhiteImg= ContextCompat.getDrawable(getApplicationContext(), R.drawable.whitebdg);
+                    imgClicked.setBackground(bgwhiteImg);
+                    imgClicked.setPressed(false);
                     getQuestionnaireAndQuestion();
                     submitImgAnsBtn.setVisibility(View.VISIBLE);
                     nextBtn.setVisibility(View.GONE);
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.GONE);
+
                 }
 
             }
