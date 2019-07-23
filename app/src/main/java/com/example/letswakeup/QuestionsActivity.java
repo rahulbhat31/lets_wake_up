@@ -112,7 +112,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 if(questionNumber >2)
                 {
                     SharedPreferences.Editor sEditor = sPreference.edit();
-                    Intent intent = new Intent(QuestionsActivity.this, ImageQuestionActivity.class);
+                    Intent intent = new Intent(QuestionsActivity.this, InstructionsPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType);
                     startActivity(intent);
                 }

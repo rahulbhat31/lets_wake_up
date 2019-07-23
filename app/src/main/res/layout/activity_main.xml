@@ -25,14 +25,18 @@
         android:hint="Enter yours name"/>
 
     <EditText
+        android:clickable="true"
+        android:focusable="false"
+        android:id="@+id/et_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:inputType="datetime"
-        android:text="Date.Of.Birth" />
+        android:hint="Date.Of.Birth" />
 
     <TextView
+        android:id="@+id/gend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -40,15 +44,18 @@
         android:textSize="20sp"
         android:text="Gender"/>
     <RadioGroup
+        android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_height="wrap_content">
         <RadioButton
+            android:id="@+id/male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
             />
         <RadioButton
+            android:id="@+id/female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"/>
@@ -56,6 +63,7 @@
     </RadioGroup>
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

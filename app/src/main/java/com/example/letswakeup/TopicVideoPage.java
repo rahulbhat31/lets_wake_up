@@ -2,6 +2,7 @@ package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -30,6 +31,7 @@ public class TopicVideoPage extends AppCompatActivity {
     String topic;
     TextView typeText;
     ImageView profile;
+    TextView name ;
 
     SharedPreferences sPreference;
     SharedPreferences.Editor sEditor;
@@ -52,6 +54,17 @@ public class TopicVideoPage extends AppCompatActivity {
         String wat_poll_save = "sYIoPIstObU";
         String water_cri_save = "DgGlVqZkB8A";
         profile = (ImageView)findViewById(R.id.avatar);
+
+
+
+
+        //set Name on top
+        name = findViewById(R.id.userName);
+        SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String userName = sf.getString("username","");
+        name.setText(userName);
+
 
         typeText = (TextView) findViewById(R.id.typeTextID);
 

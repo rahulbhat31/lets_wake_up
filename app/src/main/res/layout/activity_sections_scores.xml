@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/or"
+    tools:context=".SectionsScores">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorBrown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="rahul"
+            android:textSize="50sp"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+
+            android:layout_gravity="right"
+            android:src="@drawable/home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6."
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="Enviornment"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/envscore"
+                    android:text="10/100"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/enviornment"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:indeterminate="false"
+                android:max="10"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:progress="1"
+                android:progressDrawable="@drawable/donut_progress_bar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:text="Global Warming"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gwscore"
+                    android:text="10/100"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/global_warming"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:indeterminate="false"
+                android:max="10"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:progress="1"
+                android:progressDrawable="@drawable/donut_progress_bar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="35sp"
+                    android:text="Water Pollution"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wpscore"
+                    android:text="10/100"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/water_pollution"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:indeterminate="false"
+                android:max="10"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:progress="1"
+                android:progressDrawable="@drawable/donut_progress_bar" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:text="Water Crisis"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wcscore"
+                    android:text="10/100"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/water_crisis"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:indeterminate="false"
+                android:max="10"
+                android:minWidth="10dp"
+                android:minHeight="10dp"
+                android:progress="1"
+                android:progressDrawable="@drawable/donut_progress_bar" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
