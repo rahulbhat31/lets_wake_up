@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">Lets wake up</string>
 
+    <string name="env_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
+    <string name="wp_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
+    <string name="wc_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
+    <string name="gw_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
+
+
+
     <string name="env_ques_no">com.example.letswakeup.environmentquestionno</string>
     <string name="water_poll_ques_no">com.example.letswakeup.waterpollutionquestionno</string>
     <string name="water_crisis_ques_no">com.example.letswakeup.watercrisiquestionno</string>
     <string name="global_warming_ques_no">com.example.letswakeup.globalwarmingquestionno</string>
+
 
     <string name="img_env_ques_no">com.example.letswakeup.imgenvironmentquestionno</string>
     <string name="img_water_poll_ques_no">com.example.letswakeup.imgwaterpollutionquestionno</string>

@@ -39,6 +39,8 @@ public class TopicVideoPage extends AppCompatActivity {
 
     int questionNumber;
 
+    Boolean sectionCompleted = false;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic_video_page);
@@ -131,6 +133,19 @@ public class TopicVideoPage extends AppCompatActivity {
 
                 if(questionNumber > 5)
                 {
+                    checkSectionCompleted();
+                    if(sectionCompleted)
+                    {
+                        Intent intent = new Intent(TopicVideoPage.this, SectionCompletedPage.class);
+                        intent.putExtra(getString(R.string.question_type), topic);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
+                        intent.putExtra(getString(R.string.question_type), topic);
+                        startActivity(intent);
+                    }
                     Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
                     intent.putExtra(getString(R.string.question_type), topic);
                     startActivity(intent);
@@ -190,6 +205,32 @@ public class TopicVideoPage extends AppCompatActivity {
         }
     }
 
+
+    private void checkSectionCompleted(){
+
+        if(topic.equals(getString(R.string.environment)))
+        {
+            sectionCompleted = (sPreference.getInt(getString(R.string.env_section_completed_flag), 0) == 1) ? true: false;
+        }
+        else if(topic.equals(getString(R.string.water_pollution)))
+        {
+            sectionCompleted = (sPreference.getInt(getString(R.string.wp_section_completed_flag), 0) == 1) ? true: false;
+
+        }
+        else if(topic.equals(getString(R.string.global_warming)))
+        {
+            sectionCompleted = (sPreference.getInt(getString(R.string.gw_section_completed_flag), 0) == 1) ? true: false;
+
+        }
+        else if(topic.equals(getString(R.string.water_crisis)))
+        {
+            sectionCompleted = (sPreference.getInt(getString(R.string.wc_section_completed_flag), 0) == 1) ? true: false;
+
+        }
+
+    }
+
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(TopicVideoPage.this, HomePage.class);
@@ -202,7 +243,6 @@ public class TopicVideoPage extends AppCompatActivity {
         {
             int newQuestNo = sPreference.getInt(getString(R.string.img_env_ques_no), 0) + questionNumber;
             questionNumber = newQuestNo;
-
         }
     }
 
