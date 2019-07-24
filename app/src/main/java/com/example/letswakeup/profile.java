@@ -23,10 +23,13 @@ public class profile extends AppCompatActivity {
     ImageView home;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
 
         p_userName = findViewById(R.id.userName);
         name = findViewById(R.id.name);

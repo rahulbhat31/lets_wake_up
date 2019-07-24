@@ -291,19 +291,19 @@ public class ImageQuestionActivity extends AppCompatActivity{
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();
-        if(questionType.equals(R.string.environment)){
+        if(questionType.equals(getString(R.string.environment))){
             currentSectionScore = sPreference.getInt(getString(R.string.env_score), 0)+10;
             sEditor.putInt(getString(R.string.env_score), currentSectionScore);
         }
-        else if(questionType.equals(R.string.water_pollution)){
+        else if(questionType.equals(getString(R.string.water_pollution))){
             currentSectionScore = sPreference.getInt(getString(R.string.water_pollution_score), 0)+10;
             sEditor.putInt(getString(R.string.water_pollution_score), currentSectionScore);
         }
-        else if(questionType.equals(R.string.global_warming)){
+        else if(questionType.equals(getString(R.string.global_warming))){
             currentSectionScore = sPreference.getInt(getString(R.string.global_warming_score), 0)+10;
             sEditor.putInt(getString(R.string.global_warming_score), currentSectionScore);
         }
-        else if(questionType.equals(R.string.water_crisis)) {
+        else if(questionType.equals(getString(R.string.water_crisis))) {
             currentSectionScore = sPreference.getInt(getString(R.string.water_crisis_score), 0)+10;
             sEditor.putInt(getString(R.string.water_crisis_score), currentSectionScore);
         }

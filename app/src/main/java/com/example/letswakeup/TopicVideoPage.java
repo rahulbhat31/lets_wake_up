@@ -45,7 +45,6 @@ public class TopicVideoPage extends AppCompatActivity {
 
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
-        sPreference.edit().clear().commit();
 
         String media_url = "https://www.youtube.com/watch?v=B-nEYsyRlYo";
         topic = getIntent().getStringExtra("topic");
@@ -128,9 +127,6 @@ public class TopicVideoPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
-
                 getQuestionNumber();
 
                 if(questionNumber > 5)
@@ -173,20 +169,40 @@ public class TopicVideoPage extends AppCompatActivity {
         if(topic.equals(getString(R.string.environment)))
         {
             questionNumber = sPreference.getInt(getString(R.string.env_ques_no), 0);
+            setQuestionNumberForImageQuestion();
 
         }
         else if(topic.equals(getString(R.string.water_pollution)))
         {
             questionNumber = sPreference.getInt(getString(R.string.water_poll_ques_no), 0);
+            setQuestionNumberForImageQuestion();
 
         }
         else if(topic.equals(getString(R.string.global_warming)))
         {
             questionNumber = sPreference.getInt(getString(R.string.global_warming_ques_no), 0);
+            setQuestionNumberForImageQuestion();
         }
         else if(topic.equals(getString(R.string.water_crisis)))
         {
             questionNumber = sPreference.getInt(getString(R.string.water_crisis_ques_no), 0);
+            setQuestionNumberForImageQuestion();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(TopicVideoPage.this, HomePage.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void setQuestionNumberForImageQuestion(){
+        if(questionNumber > 2)
+        {
+            int newQuestNo = sPreference.getInt(getString(R.string.img_env_ques_no), 0) + questionNumber;
+            questionNumber = newQuestNo;
+
         }
     }
 

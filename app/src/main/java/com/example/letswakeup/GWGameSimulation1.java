@@ -2,6 +2,7 @@ package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -90,5 +91,12 @@ public class GWGameSimulation1 extends AppCompatActivity {
         gameScoreTxt.setText(gameScoreStr);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(GWGameSimulation1.this, HomePage.class);
+        startActivity(intent);
+        finish();
+    }
 
 }

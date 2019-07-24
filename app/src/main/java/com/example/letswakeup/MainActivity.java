@@ -29,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup gendr;
     EditText email;
     Button save;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    SharedPreferences sPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        /*sPreference.edit().clear().commit();*/
+
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         String userName = sf.getString("username",null);
         if(userName  != null){
