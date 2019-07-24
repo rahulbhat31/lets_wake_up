@@ -32,6 +32,7 @@ public class TopicVideoPage extends AppCompatActivity {
     TextView typeText;
     ImageView profile;
     TextView name ;
+    ImageView home;
 
     SharedPreferences sPreference;
     SharedPreferences.Editor sEditor;
@@ -64,7 +65,25 @@ public class TopicVideoPage extends AppCompatActivity {
 
         String userName = sf.getString("username","");
         name.setText(userName);
+        String gender = sf.getString("gender","");
 
+
+        profile = findViewById(R.id.avatar);
+        if(gender.toLowerCase().equals("male")){
+            profile.setImageResource(R.drawable.iconfinder_7_2694141);
+        }
+        else {
+            profile.setImageResource(R.drawable.iconfinder_11_2694133);
+        }
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TopicVideoPage.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
 
         typeText = (TextView) findViewById(R.id.typeTextID);
 

@@ -14,6 +14,7 @@
         android:background="@color/colorBrown">
 
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -40,6 +41,7 @@
             android:layout_width="155dp"
             android:layout_height="288dp"
             android:layout_marginBottom="10dp"
+            android:max="400"
             android:background="@android:color/transparent"
             android:progressDrawable="@drawable/donut_progress_bar" />
     </LinearLayout>

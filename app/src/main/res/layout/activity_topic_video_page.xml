@@ -23,8 +23,14 @@
             android:textSize="50sp"
             android:textColor="#FFFFFF"/>
         <ImageView
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:src="@drawable/home"/>
+        <ImageView
             android:id="@+id/avatar"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="80dp"
             android:layout_gravity="right"
             android:src="@drawable/iconfinder_11_2694133"/>
@@ -49,7 +55,15 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To learn more watch the video. If you have already seen the video you can skip and go ahead"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
         <Button
+            android:background="@color/colorPrimary"
             android:id="@+id/get_quest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

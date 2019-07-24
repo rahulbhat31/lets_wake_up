@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-        String userName = sf.getString("usernam",null);
+        String userName = sf.getString("username",null);
         if(userName  != null){
             Intent intent = new Intent(MainActivity.this, HomePage.class);
             intent.putExtra("Name", userName);

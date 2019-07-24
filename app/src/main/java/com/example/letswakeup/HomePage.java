@@ -2,7 +2,9 @@ package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,17 +18,40 @@ public class HomePage extends AppCompatActivity {
     Button water_pollution;
     Button water_crisis;
     ImageView profile;
+    ImageView home;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__page);
 
-        String name = (String)getIntent().getStringExtra("Name");
-        profile = findViewById(R.id.avatar);
-        nameView = findViewById(R.id.name);
-        nameView.setText(name);
 
+        SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String userName = sf.getString("username","");
+        String gender = sf.getString("gender","");
+
+
+        nameView = findViewById(R.id.name);
+        nameView.setText(userName);
+
+        profile = findViewById(R.id.avatar);
+        if(gender.toLowerCase().equals("male")){
+            profile.setImageResource(R.drawable.iconfinder_7_2694141);
+        }
+        else {
+            profile.setImageResource(R.drawable.iconfinder_11_2694133);
+        }
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
         env = findViewById(R.id.env);
         global_warmning = findViewById(R.id.global_warming);
         water_pollution = findViewById(R.id.water_pollu);
@@ -72,6 +97,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
 

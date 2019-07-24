@@ -172,7 +172,7 @@ public class ImageQuestionActivity extends AppCompatActivity{
 
                 if(questionNumber >2)
                 {
-                    Intent intent = new Intent(ImageQuestionActivity.this, GWGameSimulation1.class);
+                    Intent intent = new Intent(ImageQuestionActivity.this, InstructionsPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType);
                     startActivity(intent);
                 }

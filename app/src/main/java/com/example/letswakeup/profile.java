@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class profile extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class profile extends AppCompatActivity {
     TextView dob;
     TextView email;
     TextView gender;
+    TextView p_userName;
+    ImageView home;
 
 
     @Override
@@ -25,6 +28,7 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        p_userName = findViewById(R.id.userName);
         name = findViewById(R.id.name);
         gender = findViewById(R.id.gender);
         email = findViewById(R.id.email);
@@ -33,6 +37,7 @@ public class profile extends AppCompatActivity {
 
         String userName = sf.getString("username","");
         name.setText(userName);
+        p_userName.setText(userName);
 
         String emai = sf.getString("email","");
         email.setText(emai);
@@ -53,5 +58,15 @@ public class profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(profile.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

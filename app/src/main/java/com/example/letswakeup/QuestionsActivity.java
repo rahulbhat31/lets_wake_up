@@ -2,6 +2,7 @@ package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
@@ -25,7 +26,7 @@ public class QuestionsActivity extends AppCompatActivity {
     RadioButton btn4;
     int questionNumber;
     String answer;
-
+    TextView name;
     Button submitBtn;
     Button nextBtn;
     RadioGroup radioGroup;
@@ -34,6 +35,7 @@ public class QuestionsActivity extends AppCompatActivity {
     TextView rightAns;
     TextView wrongAns;
     ImageView profile;
+    ImageView home;
 
     int currentSectionScore;
     int currentTotalScore;
@@ -64,6 +66,22 @@ public class QuestionsActivity extends AppCompatActivity {
         getQuestionnaireAndQuestion();
 
         profile = (ImageView)findViewById(R.id.avatar);
+
+        name = findViewById(R.id.userName);
+        SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String userName = sf.getString("username","");
+        name.setText(userName);
+        String gender = sf.getString("gender","");
+
+
+        profile = findViewById(R.id.avatar);
+        if(gender.toLowerCase().equals("male")){
+            profile.setImageResource(R.drawable.iconfinder_7_2694141);
+        }
+        else {
+            profile.setImageResource(R.drawable.iconfinder_11_2694133);
+        }
         submitBtn = (Button) findViewById(R.id.submitBtnID);
         nextBtn = (Button) findViewById(R.id.nextBtnID);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroupID);
@@ -71,6 +89,14 @@ public class QuestionsActivity extends AppCompatActivity {
         wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
         rightAns = (TextView) findViewById(R.id.rightAnsStr);
 
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(QuestionsActivity.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +138,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 if(questionNumber >2)
                 {
                     SharedPreferences.Editor sEditor = sPreference.edit();
-                    Intent intent = new Intent(QuestionsActivity.this, InstructionsPage.class);
+                    Intent intent = new Intent(QuestionsActivity.this, ImageQuestionActivity.class);
                     intent.putExtra(getString(R.string.question_type), questionType);
                     startActivity(intent);
                 }
