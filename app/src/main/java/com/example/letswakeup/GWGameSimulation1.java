@@ -67,6 +67,10 @@ public class GWGameSimulation1 extends AppCompatActivity {
                 if(totalAquiredScore == 2)
                 {
                     increaseScore();
+                    setSectionCompleted();
+                    Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
+                    intent.putExtra(getString(R.string.question_type), questionType.toString());
+                    startActivity(intent);
                 }
                 plasticBottleImg.setVisibility(View.INVISIBLE);
 
@@ -121,6 +125,8 @@ public class GWGameSimulation1 extends AppCompatActivity {
         else if(questionType.equals(getString(R.string.water_crisis))) {
             sEditor.putInt(getString(R.string.wc_section_completed_flag), 1);
         }
+
+        sEditor.commit();
     }
 
 
