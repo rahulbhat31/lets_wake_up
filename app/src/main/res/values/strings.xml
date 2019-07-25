@@ -40,19 +40,19 @@
         <!--<item>" Reduce, reuse and recycle can conserve our, environment, food, climate, oxygen, environment, All these actions help us in conserving Environment"</item>-->
     </string-array>
     <string-array name="water_pollution_question">
-        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
-        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
-        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+        <item>"what is the main cause of water pollution?, humans, animals, plants, invasive species, humans, Humans are the main cause of water pollution" </item>
+        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, all of the above is the right answer"</item>
+        <item>"what is water pollution?, water being contaminated with pollutants, when you get water dirty, when fish over populate a lake, when your water tastes bad, water being contaminated with pollutants, water being contaminated with pollutants is the right answer"</item>
     </string-array>
     <string-array name="water_crisis_question">
-        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
-        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
-        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+        <item>"what percent of earth is drinkable water, 45, 10, 3, 7, 10, 10 is the right answer" </item>
+        <item>"About how many gallons of water does the average household use per day?, 1000, 367, 300, 400, 1000, 1000 is the right answer"</item>
+        <item>"what is one way you can conserve water?, take shorter showers, drink a lot of water, water your lawn daily, keep your faucet running, take shorter showers, take shorter showers is the right answer"</item>
     </string-array>
     <string-array name="global_warming_question">
-        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
-        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
-        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+        <item>"Global warming also refers to as, Climate change, Ecological change, Atmosphere change, None of the above, Climate change, Climate change causes global warming" </item>
+        <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, All of the above is the right answer"</item>
+        <item>"Which of the following is not a greenhouse gas?, Carbon di-oxide, Methane, Nitrous oxide, Carbon monoxide, Carbon monoxide, Carbon monoxide is the right answer"</item>
     </string-array>
 
 
