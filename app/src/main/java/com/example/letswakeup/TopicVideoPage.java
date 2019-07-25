@@ -146,7 +146,6 @@ public class TopicVideoPage extends AppCompatActivity {
                         intent.putExtra(getString(R.string.question_type), topic);
                         startActivity(intent);
                     }
-
                 }
                 else if(questionNumber > 2)
                 {
