@@ -48,6 +48,9 @@ public class GWGameSimulation1 extends AppCompatActivity {
                 {
                     increaseScore();
                     setSectionCompleted();
+                    Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
+                    intent.putExtra(getString(R.string.question_type), questionType.toString());
+                    startActivity(intent);
                 }
                 plasticBagImg.setVisibility(View.INVISIBLE);
 

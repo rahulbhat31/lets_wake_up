@@ -75,7 +75,6 @@
                 android:max="100"
                 android:minWidth="10dp"
                 android:minHeight="10dp"
-                android:progress="1"
                 android:progressDrawable="@drawable/donut_progress_bar" />
 
         </LinearLayout>
@@ -111,10 +110,9 @@
                 android:layout_weight="0.5"
                 android:background="@android:color/transparent"
                 android:indeterminate="false"
-                android:max="10"
+                android:max="100"
                 android:minWidth="10dp"
                 android:minHeight="10dp"
-                android:progress="1"
                 android:progressDrawable="@drawable/donut_progress_bar" />
 
         </LinearLayout>
@@ -150,10 +148,9 @@
                 android:layout_weight="0.5"
                 android:background="@android:color/transparent"
                 android:indeterminate="false"
-                android:max="10"
+                android:max="100"
                 android:minWidth="10dp"
                 android:minHeight="10dp"
-                android:progress="1"
                 android:progressDrawable="@drawable/donut_progress_bar" />
 
         </LinearLayout>
@@ -190,10 +187,9 @@
                 android:layout_weight="0.5"
                 android:background="@android:color/transparent"
                 android:indeterminate="false"
-                android:max="10"
+                android:max="100"
                 android:minWidth="10dp"
                 android:minHeight="10dp"
-                android:progress="1"
                 android:progressDrawable="@drawable/donut_progress_bar" />
 
         </LinearLayout>

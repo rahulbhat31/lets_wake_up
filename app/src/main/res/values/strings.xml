@@ -34,9 +34,10 @@
 
 
     <string-array name="env_question">
-        <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
-        <item>"which one of this option is right, o1, o2, o3, o4, o3, o3 is the right answer"</item>
-        <item>"which one of the option is wrong, a1, a2, a3, a4, a4, a4 is the right answer"</item>
+        <item>"Environment can be kept clean and green by using, less energy, environment friendly technology, protecting wildlife, all of them, all of them, All of the above actions help in saving the Environment" </item>
+        <item>"People should be banned to hunt in forest or collect wild plants to ensure protection of, wild life, ecosystem, food chain, food web, wild life, Wildlife can be protected by have strict forest rules"</item>
+        <item>"Technology can be use to harness renewable sources of, energy, food, light, heat, energy, Energy can be harnessed using technology"</item>
+        <!--<item>" Reduce, reuse and recycle can conserve our, environment, food, climate, oxygen, environment, All these actions help us in conserving Environment"</item>-->
     </string-array>
     <string-array name="water_pollution_question">
         <item>"Which of this harmful to environment, Oxygen, CO2, Hydrogen, H2O, CO2, Carbon dioxide is one the greenhouse gases that is resposnsible for global warming" </item>
@@ -56,9 +57,9 @@
 
 
     <string-array name="img_env_question">
-        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"Which of the following steps help us save environment, img1, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which of the following damages our environment, img1, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"What can you do to save environment, img1, img2, img3, img4, img3, img3 is the right answer" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
         <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>

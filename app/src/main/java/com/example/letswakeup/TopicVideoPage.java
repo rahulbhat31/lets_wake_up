@@ -136,7 +136,7 @@ public class TopicVideoPage extends AppCompatActivity {
                     checkSectionCompleted();
                     if(sectionCompleted)
                     {
-                        Intent intent = new Intent(TopicVideoPage.this, SectionCompletedPage.class);
+                        Intent intent = new Intent(TopicVideoPage.this, EndPage.class);
                         intent.putExtra(getString(R.string.question_type), topic);
                         startActivity(intent);
                     }

@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".InstructionsPage"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".SectionsScores"
@@ -25,6 +26,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".TopicVideoPage"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".EndPage"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".GWGameSimulation1"
             android:screenOrientation="landscape" />
