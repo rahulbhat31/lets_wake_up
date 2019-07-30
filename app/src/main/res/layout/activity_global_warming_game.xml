@@ -16,23 +16,22 @@
 
 
         <ImageView
-            android:id="@+id/duckImgID"
+
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="400dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="100dp"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="184dp"
+            android:layout_height="138dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/fish1imgID"
+                android:id="@+id/factory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -45,20 +44,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="400dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginRight="100dp"
-                 />
+                android:layout_marginRight="100dp" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="102dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/bottleImgID"
+                android:id="@+id/carsmoke"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="300dp"
@@ -90,9 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0/2"
-                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
                 android:textSize="36dp"
-                android:textColor="@color/colorWhite" />
+                android:textStyle="bold" />
         </LinearLayout>
 
 

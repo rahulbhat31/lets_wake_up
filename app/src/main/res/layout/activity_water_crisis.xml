@@ -32,7 +32,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/fish1imgID"
+                android:id="@+id/runningTap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
@@ -40,7 +40,7 @@
                 app:srcCompat="@drawable/tap" />
 
             <ImageView
-                android:id="@+id/bottleImgID"
+                android:id="@+id/runningShower"
                 android:layout_width="400dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="300dp"

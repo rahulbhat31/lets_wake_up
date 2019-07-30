@@ -45,6 +45,7 @@ public class SectionsScores extends AppCompatActivity {
         glo_war = findViewById(R.id.global_warming);
         gwscore = findViewById(R.id.gwscore);
         int gw_score = sf.getInt(getString(R.string.global_warming_score),0);
+        glo_war.setProgress(gw_score);
         gwscore.setText(String.valueOf(gw_score) + "/100");
 
         water_cr = findViewById(R.id.water_crisis);

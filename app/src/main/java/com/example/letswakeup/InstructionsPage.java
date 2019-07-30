@@ -27,9 +27,28 @@ public class InstructionsPage extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(InstructionsPage.this, GWGameSimulation1.class);
-                intent.putExtra(getString(R.string.question_type), questionType);
-                startActivity(intent);
+
+                if(questionType.equals(getString(R.string.environment))){
+                    Intent intent = new Intent(InstructionsPage.this, EnvGame.class);
+                    intent.putExtra(getString(R.string.question_type), questionType);
+                    startActivity(intent);
+                }
+                else if(questionType.equals(getString(R.string.water_pollution))){
+                    Intent intent = new Intent(InstructionsPage.this, GWGameSimulation1.class);
+                    intent.putExtra(getString(R.string.question_type), questionType);
+                    startActivity(intent);
+                }
+                else if(questionType.equals(getString(R.string.global_warming))){
+                    Intent intent = new Intent(InstructionsPage.this, GlobalWarmingGame.class);
+                    intent.putExtra(getString(R.string.question_type), questionType);
+                    startActivity(intent);
+                }
+                else if(questionType.equals(getString(R.string.water_crisis))) {
+                    Intent intent = new Intent(InstructionsPage.this, WaterCrisis.class);
+                    intent.putExtra(getString(R.string.question_type), questionType);
+                    startActivity(intent);
+                }
+
             }
         });
 

@@ -21,13 +21,17 @@ public class ScoreActivity extends AppCompatActivity {
     ImageView home;
     Button section_score;
     TextView name;
+    int total = 400;
+    int perc = 75;
+    ProgressBar env;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
-        pbar = (ProgressBar)findViewById(R.id.pb);
+
         name = findViewById(R.id.userName);
         SharedPreferences sfu = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
@@ -42,7 +46,11 @@ public class ScoreActivity extends AppCompatActivity {
 
         progressScore = env_score + gw_score+ wc_score+ wp_score;
 
-        pbar.setProgress(sf.getInt(getString(R.string.total_score),0));
+        double new_score = ((double) progressScore/total)*perc;
+        int next_score = (int)new_score;
+        pbar = findViewById(R.id.pb);
+        pbar.setProgress(next_score);
+
 
         home = (ImageView)findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener() {

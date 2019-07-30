@@ -35,15 +35,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         >
+
         <ProgressBar
             android:id="@+id/pb"
-            style="@android:style/Widget.ProgressBar.Horizontal"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="155dp"
             android:layout_height="288dp"
             android:layout_marginBottom="10dp"
-            android:max="400"
             android:background="@android:color/transparent"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
             android:progressDrawable="@drawable/donut_progress_bar" />
+
+
     </LinearLayout>
 
     <TextView
