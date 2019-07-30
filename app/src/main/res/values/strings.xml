@@ -7,7 +7,6 @@
     <string name="gw_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
 
 
-
     <string name="env_ques_no">com.example.letswakeup.environmentquestionno</string>
     <string name="water_poll_ques_no">com.example.letswakeup.waterpollutionquestionno</string>
     <string name="water_crisis_ques_no">com.example.letswakeup.watercrisiquestionno</string>
@@ -57,24 +56,24 @@
 
 
     <string-array name="img_env_question">
-        <item>"Which of the following steps help us save environment, img1, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"which of the following damages our environment, img1, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"What can you do to save environment, img1, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"Which of the following steps help us save environment, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which of the following damages our environment, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"What can you do to save environment, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
-        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
     </string-array>
     <string-array name="img_water_crisis_question">
-        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, plant_tree, plant_tree, plant_tree, plant_tree, plant_tree is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
     </string-array>
     <string-array name="img_global_warming_question">
-        <item>"which one of this option is right, img1, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img3, img3 is the right answer" </item>
-        <item>"which one of this option is right, img1, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
     </string-array>
 
 </resources>

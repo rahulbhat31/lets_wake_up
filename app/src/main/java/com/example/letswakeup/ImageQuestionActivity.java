@@ -3,6 +3,7 @@ package com.example.letswakeup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -22,6 +23,7 @@ public class ImageQuestionActivity extends AppCompatActivity{
     private RadioGroup mSecondGroup;
     String clickedImageName;
 
+    TextView nameView;
     TextView rightAns;
     TextView wrongAns;
     ImageView profile;
@@ -65,6 +67,22 @@ public class ImageQuestionActivity extends AppCompatActivity{
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
 
+        SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String userName = sf.getString("username","");
+        String gender = sf.getString("gender","");
+
+
+        nameView = findViewById(R.id.name);
+        nameView.setText(userName);
+
+        profile = findViewById(R.id.avatar);
+        if(gender.toLowerCase().equals("male")){
+            profile.setImageResource(R.drawable.iconfinder_7_2694141);
+        }
+        else {
+            profile.setImageResource(R.drawable.iconfinder_11_2694133);
+        }
         profile = (ImageView)findViewById(R.id.avatar);
 
        /* mFirstGroup = (RadioGroup) findViewById(R.id.first_group);

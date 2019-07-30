@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/or"
+
     tools:context=".ImageQuestionActivity"
     android:orientation="vertical">
 
@@ -15,6 +15,7 @@
         android:background="@color/colorBrown">
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="277dp"
             android:layout_height="78dp"
             android:layout_marginLeft="20dp"
@@ -59,12 +60,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp">
 
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:id="@+id/img1"
                 android:padding="10dp"
                 android:background="@drawable/whitebdg"
@@ -73,8 +76,8 @@
                 android:layout_centerHorizontal="true"/>
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:id="@+id/img2"
                 android:padding="10dp"
                 android:background="@drawable/whitebdg"
@@ -84,8 +87,8 @@
 
             <ImageButton
                 android:id="@+id/img3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:adjustViewBounds="true"
@@ -93,8 +96,8 @@
                 android:padding="10dp" />
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:id="@+id/img4"
                 android:padding="10dp"
                 android:background="@drawable/whitebdg"

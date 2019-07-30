@@ -39,9 +39,10 @@ public class ScoreActivity extends AppCompatActivity {
         int gw_score = sf.getInt(getString(R.string.global_warming_score),0);
         int wc_score = sf.getInt(getString(R.string.water_crisis_score),0);
         int wp_score = sf.getInt(getString(R.string.water_pollution_score),0);
+
         progressScore = env_score + gw_score+ wc_score+ wp_score;
 
-        pbar.setProgress(progressScore);
+        pbar.setProgress(sf.getInt(getString(R.string.total_score),0));
 
         home = (ImageView)findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener() {
