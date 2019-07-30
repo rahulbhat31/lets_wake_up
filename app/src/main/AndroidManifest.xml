@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WaterCrisis"></activity>
+        <activity android:name=".EnvGame"></activity>
+        <activity android:name=".WaterCrisis" />
         <activity android:name=".GlobalWarmingGame" />
         <activity
             android:name=".InstructionsPage"
