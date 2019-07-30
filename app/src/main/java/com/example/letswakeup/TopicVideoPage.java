@@ -146,9 +146,6 @@ public class TopicVideoPage extends AppCompatActivity {
                         intent.putExtra(getString(R.string.question_type), topic);
                         startActivity(intent);
                     }
-                    Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
-                    intent.putExtra(getString(R.string.question_type), topic);
-                    startActivity(intent);
                 }
                 else if(questionNumber > 2)
                 {
