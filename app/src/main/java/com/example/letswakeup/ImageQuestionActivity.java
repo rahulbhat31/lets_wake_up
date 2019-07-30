@@ -7,6 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +21,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ImageQuestionActivity extends AppCompatActivity{
+public class ImageQuestionActivity extends AppCompatActivity implements SensorEventListener {
+
+    private SensorManager senSensorManager;
+    private Sensor senAccelerometer;
 
     private RadioGroup mFirstGroup;
     private RadioGroup mSecondGroup;
@@ -59,12 +66,22 @@ public class ImageQuestionActivity extends AppCompatActivity{
 
     int questionNumber;
 
+    private long lastUpdate = 0;
+    private float last_x, last_y, last_z;
+    private static final int SHAKE_THRESHOLD = 100;
+
+    boolean canGoToNext = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_question);
 
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+
+        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
 
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
@@ -128,6 +145,7 @@ public class ImageQuestionActivity extends AppCompatActivity{
             public void onClick(View view) {
                 if(clickedImageName.equals(answerImgName))
                 {
+                    canGoToNext = true;
                     increaseScore();
                     setNextQuestionNumber();
                     wrongAns.setVisibility(View.GONE);
@@ -184,9 +202,10 @@ public class ImageQuestionActivity extends AppCompatActivity{
             }
         });
 
-        nextBtn.setOnClickListener(new View.OnClickListener() {
+        /*nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 if(questionNumber >2)
                 {
@@ -209,7 +228,7 @@ public class ImageQuestionActivity extends AppCompatActivity{
 
             }
         });
-
+*/
     }
 
     private void setNextQuestionNumber(){
@@ -335,5 +354,75 @@ public class ImageQuestionActivity extends AppCompatActivity{
         Intent intent = new Intent(ImageQuestionActivity.this, HomePage.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        if(canGoToNext == true)
+        {
+            Sensor mySensor = sensorEvent.sensor;
+
+            if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                float x = sensorEvent.values[0];
+                float y = sensorEvent.values[1];
+                float z = sensorEvent.values[2];
+
+                long curTime = System.currentTimeMillis();
+
+                if ((curTime - lastUpdate) > 100) {
+                    long diffTime = (curTime - lastUpdate);
+                    lastUpdate = curTime;
+
+                    float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+                    if (speed > SHAKE_THRESHOLD) {
+                        goToNextQuestion();
+                    }
+
+                    last_x = x;
+                    last_y = y;
+                    last_z = z;
+                }
+            }
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int i) {
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        senSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    private void goToNextQuestion(){
+        canGoToNext = false;
+        if(questionNumber >2)
+        {
+            Intent intent = new Intent(ImageQuestionActivity.this, GWGameSimulation1.class);
+            intent.putExtra(getString(R.string.question_type), questionType);
+            startActivity(intent);
+        }
+        else
+        {
+            Drawable bgwhiteImg= ContextCompat.getDrawable(getApplicationContext(), R.drawable.whitebdg);
+            imgClicked.setBackground(bgwhiteImg);
+            imgClicked.setPressed(false);
+            getQuestionnaireAndQuestion();
+            submitImgAnsBtn.setVisibility(View.VISIBLE);
+            nextBtn.setVisibility(View.GONE);
+            wrongAns.setVisibility(View.GONE);
+            rightAns.setVisibility(View.GONE);
+
+        }
     }
 }
