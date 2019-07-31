@@ -61,19 +61,19 @@
         <item>"What can you do to save environment, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which of the following causes water pollution, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which of the following helps prevent water pollution, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"What are the affects of water pollution, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
     </string-array>
     <string-array name="img_water_crisis_question">
-        <item>"which one of this option is right, plant_tree, plant_tree, plant_tree, plant_tree, plant_tree, plant_tree is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"Which of the following adds up to water crisis, plant_tree, img2, img2, img2, plant_tree, plant_tree is the right answer" </item>
+        <item>"which of the following can help us prevent water crisis, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which are the affects of water crisis, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
     </string-array>
     <string-array name="img_global_warming_question">
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
-        <item>"which one of this option is right, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"What is the cause of global warming, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"What helps us prevent global warming, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"What is the affect of global warming, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
     </string-array>
 
 </resources>

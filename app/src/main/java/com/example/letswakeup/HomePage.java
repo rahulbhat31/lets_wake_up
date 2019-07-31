@@ -19,7 +19,6 @@ public class HomePage extends AppCompatActivity {
     Button water_crisis;
     ImageView profile;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,10 +88,6 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 
 }
