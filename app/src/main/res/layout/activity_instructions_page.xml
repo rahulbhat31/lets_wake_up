@@ -41,23 +41,24 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:text="Instructions on how to play the game:"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
             android:text="You will be seeing an image with many objects in the
 the image. You have to tap on objects that are not suitable or harmly for the senario.
 Earn all the points to complete the section. Score displayed at bottom left "
-            android:textSize="30sp"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            />
+            android:textSize="22sp" />
         <Button
             android:id="@+id/play"
             android:layout_width="wrap_content"

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="380dp"
     tools:context=".GWGameSimulation1">
 
-    <ImageView
 
+    <ImageView
         android:id="@+id/waterImgID"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
         app:srcCompat="@drawable/waterbgimg" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="5">
@@ -22,8 +24,8 @@
 
         <ImageView
             android:id="@+id/duckImgID"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="400dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="100dp"
@@ -77,14 +79,24 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/waterPollGSID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="0/2"
+                android:textColor="@color/colorBlack"
+                android:textSize="34dp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/fish2imgID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/fishimg2" />
 
@@ -92,40 +104,27 @@
                 android:id="@+id/seaHorseImgID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="400dp"
+                android:layout_marginLeft="200dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="100dp"
                 app:srcCompat="@drawable/seahorse" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="100dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/waterPollGSID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0/2"
-                android:textStyle="bold"
-                android:textSize="36dp"
-                android:textColor="@color/colorWhite" />
-        </LinearLayout>
-
-
     </LinearLayout>
 
-
-
-
-
-
-
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite">
+        <TextView
+            android:id="@+id/tutGWGameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Find all items that are harming environment and earn points"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorFluorescentDark"/>
+    </LinearLayout>
 
 
 </FrameLayout>

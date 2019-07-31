@@ -92,7 +92,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         String gender = sf.getString("gender","");
 
 
-        nameView = findViewById(R.id.name);
+        nameView = findViewById(R.id.nameImgPage);
         nameView.setText(userName);
 
         profile = findViewById(R.id.avatar);

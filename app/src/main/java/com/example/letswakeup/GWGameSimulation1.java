@@ -9,9 +9,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.concurrent.TimeUnit;
+
 public class GWGameSimulation1 extends AppCompatActivity {
 
 
+    TextView gwTutorialTxt;
     ImageView plasticBottleImg;
     ImageView plasticBagImg;
     TextView gameScoreTxt;
@@ -35,6 +38,8 @@ public class GWGameSimulation1 extends AppCompatActivity {
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
         questionType = getIntent().getExtras().getString(getString(R.string.question_type));
 
+        gwTutorialTxt = (TextView) findViewById(R.id.tutGWGameTxt);
+
         plasticBottleImg = (ImageView) findViewById(R.id.bottleImgID);
         plasticBagImg = (ImageView) findViewById(R.id.plasticBagImgID);
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
@@ -46,13 +51,21 @@ public class GWGameSimulation1 extends AppCompatActivity {
                 totalAquiredScore+=1;
                 if(totalAquiredScore == 2)
                 {
+                    gwTutorialTxt.setText("You got it all right!!");
                     increaseScore();
                     setSectionCompleted();
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType.toString());
                     startActivity(intent);
+
                 }
                 plasticBagImg.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point");
 
 
             }
@@ -66,13 +79,21 @@ public class GWGameSimulation1 extends AppCompatActivity {
                 totalAquiredScore+=1;
                 if(totalAquiredScore == 2)
                 {
+                    gwTutorialTxt.setText("You got it all right!!");
                     increaseScore();
                     setSectionCompleted();
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType.toString());
                     startActivity(intent);
+
                 }
                 plasticBottleImg.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point");
 
             }
         });
