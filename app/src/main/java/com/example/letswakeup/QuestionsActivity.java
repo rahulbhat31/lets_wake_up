@@ -38,7 +38,6 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
     String answer;
     TextView name;
     Button submitBtn;
-    Button nextBtn;
     RadioGroup radioGroup;
     RadioButton selectedButton;
     String responseText;
@@ -98,7 +97,6 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             profile.setImageResource(R.drawable.iconfinder_11_2694133);
         }
         submitBtn = (Button) findViewById(R.id.submitBtnID);
-        nextBtn = (Button) findViewById(R.id.nextBtnID);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroupID);
 
         wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
@@ -129,7 +127,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
                     submitBtn.setVisibility(View.GONE);
-                    nextBtn.setVisibility(View.VISIBLE);
+
 
                 }
                 else
@@ -144,32 +142,6 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
 
             }
         });
-
-
-
-        /*nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(questionNumber >2)
-                {
-                    SharedPreferences.Editor sEditor = sPreference.edit();
-                    Intent intent = new Intent(QuestionsActivity.this, ImageQuestionActivity.class);
-                    intent.putExtra(getString(R.string.question_type), questionType);
-                    startActivity(intent);
-                }
-                else
-                {
-                    selectedButton.setChecked(false);
-                    getQuestionnaireAndQuestion();
-                    wrongAns.setVisibility(View.GONE);
-                    rightAns.setVisibility(View.GONE);
-                    nextBtn.setVisibility(View.GONE);
-                    submitBtn.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });*/
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -343,7 +315,6 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             getQuestionnaireAndQuestion();
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
-            nextBtn.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
         }
     }

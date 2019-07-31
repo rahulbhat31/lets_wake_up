@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -39,12 +40,10 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
     Button submitImgAnsBtn;
 
-    Button nextBtn;
-
     public static final String MyPREFERENCES = "MyPrefs" ;
 
-    ImageButton imgClicked;
-    ImageButton prevImgClicked;
+    LinearLayout imgClicked;
+    LinearLayout prevImgClicked;
 
     TextView questionTextView;
     ImageButton option1Img;
@@ -109,7 +108,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         rightAns = (TextView) findViewById(R.id.rightImgAnsStr);
 
         submitImgAnsBtn = (Button) findViewById(R.id.imgQuesSubmitBtn);
-        nextBtn = (Button) findViewById(R.id.imgNextBtn);
+
 
         questionType = getIntent().getExtras().getString(getString(R.string.question_type));
         getQuestionnaireAndQuestion();
@@ -151,7 +150,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
                     submitImgAnsBtn.setVisibility(View.GONE);
-                    nextBtn.setVisibility(View.VISIBLE);
+
 
                 }
                 else
@@ -202,33 +201,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             }
         });
 
-        /*nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-                if(questionNumber >2)
-                {
-                    Intent intent = new Intent(ImageQuestionActivity.this, InstructionsPage.class);
-                    intent.putExtra(getString(R.string.question_type), questionType);
-                    startActivity(intent);
-                }
-                else
-                {
-                    Drawable bgwhiteImg= ContextCompat.getDrawable(getApplicationContext(), R.drawable.whitebdg);
-                    imgClicked.setBackground(bgwhiteImg);
-                    imgClicked.setPressed(false);
-                    getQuestionnaireAndQuestion();
-                    submitImgAnsBtn.setVisibility(View.VISIBLE);
-                    nextBtn.setVisibility(View.GONE);
-                    wrongAns.setVisibility(View.GONE);
-                    rightAns.setVisibility(View.GONE);
-
-                }
-
-            }
-        });
-*/
     }
 
     private void setNextQuestionNumber(){
@@ -257,13 +230,12 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             prevImgClicked = imgClicked;
             Drawable bgwhiteImg= ContextCompat.getDrawable(this, R.drawable.whitebdg);
             prevImgClicked.setBackground(bgwhiteImg);
-            prevImgClicked.setPressed(false);
         }
-        imgClicked = (ImageButton) findViewById(view.getId());
+        int img = ((LinearLayout)view.getParent()).getId();
+        imgClicked = (LinearLayout) findViewById(((LinearLayout)view.getParent()).getId());
         Drawable bgImg= ContextCompat.getDrawable(this, R.drawable.redbgd);
         imgClicked.setBackground(bgImg);
-        clickedImageName = getResources().getResourceEntryName(imgClicked.getId());
-        imgClicked.setPressed(true);
+        clickedImageName = getResources().getResourceEntryName(view.getId());
     }
 
     private void getQuestionnaireAndQuestion()
@@ -419,7 +391,6 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             imgClicked.setPressed(false);
             getQuestionnaireAndQuestion();
             submitImgAnsBtn.setVisibility(View.VISIBLE);
-            nextBtn.setVisibility(View.GONE);
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
 
