@@ -57,8 +57,8 @@
 
     <string-array name="img_env_question">
         <item>"Which of the following steps help us save environment, env11, env12, env13, env14, img1, env11 is the right answer" </item>
-        <item>"which of the following damages our environment, env11, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"What can you do to save environment, env11, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"which of the following damages our environment, env11, env22, env23, env12, img4, img2 is the right answer" </item>
+        <item>"Which one is not an environmental issue, env12, env13, env31, env14, img3, img3 is the right answer" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
         <item>"which of the following causes water pollution, env11, img2, img3, img4, img4, img4 is the right answer" </item>
@@ -71,9 +71,9 @@
         <item>"which are the affects of water crisis, env11, img2, img3, img4, img1, img1 is the right answer" </item>
     </string-array>
     <string-array name="img_global_warming_question">
-        <item>"What is the cause of global warming, env11, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"What helps us prevent global warming, env11, img2, img3, img4, img3, img3 is the right answer" </item>
-        <item>"What is the affect of global warming, env11, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"What is the cause of global warming, gbw11, gbw12, gbw13, gbw14, img4, img4 is the right answer" </item>
+        <item>"What helps us prevent global warming, gbw11, gbw14, env12, env13, img1, img1 is the right answer" </item>
+        <item>"What is the not effect of global warming, gbw31, gbw32, gbw33, gbw34, img3, img3 is the right answer" </item>
     </string-array>
 
 </resources>
