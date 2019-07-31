@@ -29,6 +29,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
     private float last_x, last_y, last_z;
     private static final int SHAKE_THRESHOLD = 200;
 
+    TextView tutQuestionPageText;
+
     TextView questionTxtView;
     RadioButton btn1;
     RadioButton btn2;
@@ -71,6 +73,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
 
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
         questionType = getIntent().getExtras().getString(getString(R.string.question_type));
+
+        tutQuestionPageText = (TextView) findViewById(R.id.tutorialQuestionPage);
 
         senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -127,11 +131,11 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
                     submitBtn.setVisibility(View.GONE);
-
-
+                    tutQuestionPageText.setVisibility(View.VISIBLE);
                 }
                 else
                 {
+                    tutQuestionPageText.setVisibility(View.GONE);
                     rightAns = (TextView) findViewById(R.id.rightAnsStr);
                     rightAns.setVisibility(View.GONE);
                     wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
@@ -315,7 +319,9 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             getQuestionnaireAndQuestion();
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
+            tutQuestionPageText.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
+
         }
     }
 }

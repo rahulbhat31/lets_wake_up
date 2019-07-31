@@ -44,6 +44,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
     LinearLayout imgClicked;
     LinearLayout prevImgClicked;
+    TextView imgPageTutorialTxt;
 
     TextView questionTextView;
     ImageButton option1Img;
@@ -76,6 +77,8 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_question);
 
+        imgPageTutorialTxt = (TextView) findViewById(R.id.imgTutorialQuestionPage);
+
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
         senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -101,8 +104,6 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         }
         profile = (ImageView)findViewById(R.id.avatar);
 
-       /* mFirstGroup = (RadioGroup) findViewById(R.id.first_group);
-        mSecondGroup = (RadioGroup) findViewById(R.id.second_group);*/
 
         wrongAns = (TextView) findViewById(R.id.wrongImgAnsStr);
         rightAns = (TextView) findViewById(R.id.rightImgAnsStr);
@@ -115,29 +116,6 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
 
 
-        /*mFirstGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId != -1 && isChecking) {
-                    isChecking = false;
-                    mSecondGroup.clearCheck();
-                    mCheckedId = checkedId;
-                }
-                isChecking = true;
-            }
-        });
-
-        mSecondGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId != -1 && isChecking) {
-                    isChecking = false;
-                    mFirstGroup.clearCheck();
-                    mCheckedId = checkedId;
-                }
-                isChecking = true;
-            }
-        });*/
 
         submitImgAnsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,6 +127,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     setNextQuestionNumber();
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
+                    imgPageTutorialTxt.setVisibility(View.VISIBLE);
                     submitImgAnsBtn.setVisibility(View.GONE);
 
 
@@ -158,6 +137,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     rightAns = (TextView) findViewById(R.id.rightImgAnsStr);
                     rightAns.setVisibility(View.GONE);
                     wrongAns = (TextView) findViewById(R.id.wrongImgAnsStr);
+                    imgPageTutorialTxt.setVisibility(View.GONE);
                     wrongAns.setVisibility(View.VISIBLE);
                 }
             }
@@ -391,6 +371,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             imgClicked.setPressed(false);
             getQuestionnaireAndQuestion();
             submitImgAnsBtn.setVisibility(View.VISIBLE);
+            imgPageTutorialTxt.setVisibility(View.GONE);
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
 
