@@ -18,7 +18,6 @@ public class HomePage extends AppCompatActivity {
     Button water_pollution;
     Button water_crisis;
     ImageView profile;
-    ImageView home;
 
 
     @Override
@@ -44,14 +43,7 @@ public class HomePage extends AppCompatActivity {
             profile.setImageResource(R.drawable.iconfinder_11_2694133);
         }
 
-        home = findViewById(R.id.home);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePage.this, HomePage.class);
-                startActivity(intent);
-            }
-        });
+
         env = findViewById(R.id.env);
         global_warmning = findViewById(R.id.global_warming);
         water_pollution = findViewById(R.id.water_pollu);

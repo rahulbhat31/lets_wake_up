@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -15,9 +18,16 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.hardware.SensorManager;
 
-public class QuestionsActivity extends AppCompatActivity {
+public class QuestionsActivity extends AppCompatActivity implements SensorEventListener {
 
+    private SensorManager senSensorManager;
+    private Sensor senAccelerometer;
+
+    private long lastUpdate = 0;
+    private float last_x, last_y, last_z;
+    private static final int SHAKE_THRESHOLD = 200;
 
     TextView questionTxtView;
     RadioButton btn1;
@@ -28,7 +38,6 @@ public class QuestionsActivity extends AppCompatActivity {
     String answer;
     TextView name;
     Button submitBtn;
-    Button nextBtn;
     RadioGroup radioGroup;
     RadioButton selectedButton;
     String responseText;
@@ -52,6 +61,8 @@ public class QuestionsActivity extends AppCompatActivity {
     String[] quesArr;
     String wrongAnsResponse;
 
+    boolean canGoToNext = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +70,12 @@ public class QuestionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_questions);
 
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
-
-
         questionType = getIntent().getExtras().getString(getString(R.string.question_type));
+
+        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
+
 
         getQuestionnaireAndQuestion();
 
@@ -83,7 +97,6 @@ public class QuestionsActivity extends AppCompatActivity {
             profile.setImageResource(R.drawable.iconfinder_11_2694133);
         }
         submitBtn = (Button) findViewById(R.id.submitBtnID);
-        nextBtn = (Button) findViewById(R.id.nextBtnID);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroupID);
 
         wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
@@ -108,12 +121,13 @@ public class QuestionsActivity extends AppCompatActivity {
 
                 if(responseText.equals(answer))
                 {
+                    canGoToNext = true;
                     increaseScore();
                     setNextQuestionNumber();
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
                     submitBtn.setVisibility(View.GONE);
-                    nextBtn.setVisibility(View.VISIBLE);
+
 
                 }
                 else
@@ -125,32 +139,6 @@ public class QuestionsActivity extends AppCompatActivity {
                     wrongAns.setVisibility(View.VISIBLE);
                 }
 
-
-            }
-        });
-
-
-
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(questionNumber >2)
-                {
-                    SharedPreferences.Editor sEditor = sPreference.edit();
-                    Intent intent = new Intent(QuestionsActivity.this, ImageQuestionActivity.class);
-                    intent.putExtra(getString(R.string.question_type), questionType);
-                    startActivity(intent);
-                }
-                else
-                {
-                    selectedButton.setChecked(false);
-                    getQuestionnaireAndQuestion();
-                    wrongAns.setVisibility(View.GONE);
-                    rightAns.setVisibility(View.GONE);
-                    nextBtn.setVisibility(View.GONE);
-                    submitBtn.setVisibility(View.VISIBLE);
-                }
 
             }
         });
@@ -262,5 +250,72 @@ public class QuestionsActivity extends AppCompatActivity {
         Intent intent = new Intent(QuestionsActivity.this, HomePage.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        if(canGoToNext == true)
+        {
+            Sensor mySensor = sensorEvent.sensor;
+            if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                float x = sensorEvent.values[0];
+                float y = sensorEvent.values[1];
+                float z = sensorEvent.values[2];
+
+                long curTime = System.currentTimeMillis();
+
+                if ((curTime - lastUpdate) > 100) {
+                    long diffTime = (curTime - lastUpdate);
+                    lastUpdate = curTime;
+
+                    float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+                    if (speed > SHAKE_THRESHOLD) {
+                        goToNextQuestion();
+                    }
+
+                    last_x = x;
+                    last_y = y;
+                    last_z = z;
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int i) {
+
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        senSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    private void goToNextQuestion()
+    {
+        canGoToNext = false;
+        if(questionNumber >2)
+        {
+            SharedPreferences.Editor sEditor = sPreference.edit();
+            Intent intent = new Intent(QuestionsActivity.this, ImageQuestionActivity.class);
+            intent.putExtra(getString(R.string.question_type), questionType);
+            startActivity(intent);
+        }
+        else
+        {
+            selectedButton.setChecked(false);
+            getQuestionnaireAndQuestion();
+            wrongAns.setVisibility(View.GONE);
+            rightAns.setVisibility(View.GONE);
+            submitBtn.setVisibility(View.VISIBLE);
+        }
     }
 }

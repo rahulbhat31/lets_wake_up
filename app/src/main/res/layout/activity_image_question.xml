@@ -59,51 +59,75 @@
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="2"
             android:layout_gravity="center"
+            android:columnCount="2"
             android:horizontalSpacing="10dp"
             android:verticalSpacing="10dp">
 
+            <LinearLayout
+                android:id="@+id/bgLayout1"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/whitebdg">
 
-            <ImageButton
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:id="@+id/img1"
-                android:padding="10dp"
-                android:background="@drawable/whitebdg"
-                android:layout_centerVertical="true"
-                android:adjustViewBounds="true"
-                android:layout_centerHorizontal="true"/>
+                <ImageButton
+                    android:id="@+id/img1"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
 
-            <ImageButton
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:id="@+id/img2"
-                android:padding="10dp"
-                android:background="@drawable/whitebdg"
-                android:adjustViewBounds="true"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"/>
 
-            <ImageButton
-                android:id="@+id/img3"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:adjustViewBounds="true"
-                android:background="@drawable/whitebdg"
-                android:padding="10dp" />
+            <LinearLayout
+                android:id="@+id/bgLayout2"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/whitebdg">
 
-            <ImageButton
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:id="@+id/img4"
-                android:padding="10dp"
-                android:background="@drawable/whitebdg"
-                android:adjustViewBounds="true"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"/>
+                <ImageButton
+                    android:id="@+id/img2"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgLayout3"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/whitebdg">
+
+                <ImageButton
+                    android:id="@+id/img3"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgLayout4"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/whitebdg">
+
+                <ImageButton
+                    android:id="@+id/img4"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
 
         </GridLayout>
 
@@ -114,7 +138,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="1.6">
+        android:layout_weight="1.6"
+        >
 
         <Button
             android:id="@+id/imgQuesSubmitBtn"
@@ -123,47 +148,18 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorBrown"
             android:textColor="@color/colorWhite"
-            android:text="Submit" />
-
-        <Button
-            android:id="@+id/imgNextBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/colorBrown"
-            android:textColor="@color/colorWhite"
-            android:visibility="gone"
-            android:text="Next" />
-
-
-
-        <!--<ImageView
-            android:id="@+id/rightAnswerImgQuesID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/righttick" />
-
-        <ImageView
-            android:id="@+id/wrongAnswerImgQuesID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/wrongcross" />-->
-
+            android:text="Submit"/>
 
         <TextView
             android:id="@+id/rightImgAnsStr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:paddingLeft="40dp"
             android:text="Got it right!!"
             android:textColor="@color/colorGreen"
+            android:textSize="20dp"
             android:textStyle="bold"
-            android:visibility="gone"
-            android:textSize="20dp" />
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/wrongImgAnsStr"
@@ -173,7 +169,7 @@
             android:textStyle="bold"
             android:textColor="@color/colorRed"
             android:visibility="gone"
-            android:textSize="20dp" />
+            android:textSize="20dp"/>
 
     </LinearLayout>
 
