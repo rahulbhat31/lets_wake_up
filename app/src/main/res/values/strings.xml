@@ -60,20 +60,20 @@
         <item>"which of the following damages our environment, plant_tree, env22, env23, env12, img4, Cutting trees affects human in many ways" </item>
         <item>"Which one is not an environmental issue, env12, env13, env31, env14, img3, Environmental issues are far bigger than money issues" </item>
     </string-array>
-    <string-array name="img_water_pollution_question">
-        <item>"which of the following causes water pollution, env11, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which of the following helps prevent water pollution, env11, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"What are the affects of water pollution, env11, img2, img3, img4, img2, img2 is the right answer" </item>
-    </string-array>
-    <string-array name="img_water_crisis_question">
-        <item>"Which of the following adds up to water crisis, env11, img2, img2, img2, img1, img1 is the right answer" </item>
-        <item>"which of the following can help us prevent water crisis, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which are the affects of water crisis, env11, img2, img3, img4, img1, img1 is the right answer" </item>
-    </string-array>
     <string-array name="img_global_warming_question">
         <item>"What is the cause of global warming, gbw11, gbw12, gbw13, gbw14, img4, Increase in number of cars causes pollution " </item>
         <item>"What helps us prevent global warming, gbw11, gbw14, env12, env13, img1, Solar energy is clean energy" </item>
         <item>"Which of these is not a effect of global warming, gbw31, gbw32, gbw33, gbw34, img3, Global warming damages our greenery" </item>
+    </string-array>
+    <string-array name="img_water_pollution_question">
+        <item>"which of the following causes water pollution, wp11, wp12, wp13, wp14, img1, plastic takes 1000years to decompose " </item>
+        <item>"which of the following helps prevent water pollution, wp21, wp22, wp23, wp24, img3, Garbage disposal should be given a thought" </item>
+        <item>"What are the affects of water pollution, wp31, wp32, wp33, wp34, img4,  World can become inhabitable" </item>
+    </string-array>
+    <string-array name="img_water_crisis_question">
+        <item>"Which of the following adds up to water crisis, wc11, wc12, wc13, wc14, img1, Save water " </item>
+        <item>"which of the following can help us prevent water crisis, wc21, wc22, wc23, wc24, img1, Taps should not be let open" </item>
+        <item>"which are the affects of water crisis, wc31, wc32, wc33, wc34, img3, World can run out of fresh water if not used judiciously" </item>
     </string-array>
 
 </resources>

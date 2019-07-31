@@ -16,16 +16,15 @@ import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
 
-    ProgressBar pbar;
+    /*ProgressBar pbar;*/
     int progressScore;
     ImageView home;
     Button section_score;
     TextView name;
-    int total = 400;
-    int perc = 75;
+    double total = 400;
+    double perc = 100;
     ProgressBar env;
-
-
+    TextView ttlPoints;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,6 +32,7 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
 
         name = findViewById(R.id.userName);
+        ttlPoints = findViewById(R.id.pointsID);
         SharedPreferences sfu = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
         String userName = sfu.getString("username","");
@@ -46,10 +46,11 @@ public class ScoreActivity extends AppCompatActivity {
 
         progressScore = env_score + gw_score+ wc_score+ wp_score;
 
-        double new_score = ((double) progressScore/total)*perc;
-        int next_score = (int)new_score;
-        pbar = findViewById(R.id.pb);
-        pbar.setProgress(next_score);
+        double new_score = Math.floor((progressScore/total)*perc);
+        int new_score_int = (int)new_score;
+        /*pbar = findViewById(R.id.pb);
+        pbar.setProgress(new_score_int);*/
+        ttlPoints.setText(Integer.toString(new_score_int));
 
 
         home = (ImageView)findViewById(R.id.home);

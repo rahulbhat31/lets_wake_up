@@ -315,7 +315,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         }
         else
         {
-            selectedButton.setChecked(false);
+            RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroupID);
+            rg.clearCheck();
             getQuestionnaireAndQuestion();
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
