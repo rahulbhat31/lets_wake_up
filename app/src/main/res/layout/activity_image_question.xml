@@ -72,12 +72,13 @@
 
                 <ImageButton
                     android:id="@+id/img1"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="20dp"
-                    android:adjustViewBounds="true" />
+                    android:scaleType="fitXY"
+                     />
             </LinearLayout>
 
 
@@ -89,12 +90,13 @@
 
                 <ImageButton
                     android:id="@+id/img2"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="20dp"
-                    android:adjustViewBounds="true" />
+                    android:scaleType="fitXY"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -105,12 +107,14 @@
 
                 <ImageButton
                     android:id="@+id/img3"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="20dp"
-                    android:adjustViewBounds="true" />
+                    android:scaleType="fitXY"
+
+                />
             </LinearLayout>
 
             <LinearLayout
@@ -121,12 +125,13 @@
 
                 <ImageButton
                     android:id="@+id/img4"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="20dp"
-                    android:adjustViewBounds="true" />
+                    android:scaleType="fitXY"
+                    />
             </LinearLayout>
 
         </GridLayout>

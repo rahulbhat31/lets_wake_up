@@ -24,7 +24,6 @@ public class TopicVideoPage extends AppCompatActivity {
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     String vid ;
-    String SrcPath = "rtsp://v5.cache1.c.youtube.com/CjYLENy73wIaLQnhycnrJQ8qmRMYESARFEIJbXYtZ29vZ2xlSARSBXdhdGNoYPj_hYjnq6uUTQw=/0/0/0/video.3gp";
     Button get_quest;
     WebView mWebView;
     private boolean mIsPaused = false;
@@ -48,7 +47,6 @@ public class TopicVideoPage extends AppCompatActivity {
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
 
-        String media_url = "https://www.youtube.com/watch?v=B-nEYsyRlYo";
         topic = getIntent().getStringExtra("topic");
         WebView youtubeWebView = findViewById(R.id.youtube_web_view); //todo find or bind web view
         String env_save = "Vkq_srFGW5I";

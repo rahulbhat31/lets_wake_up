@@ -56,7 +56,7 @@
 
 
     <string-array name="img_env_question">
-        <item>"Which of the following steps help us save environment, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"Which of the following steps help us save environment, plant_tree, env12, env13, env14, env12, plant_tree is the right answer" </item>
         <item>"which of the following damages our environment, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
         <item>"What can you do to save environment, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
     </string-array>
