@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class InstructionsPage extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class InstructionsPage extends AppCompatActivity {
     String questionType;
     ImageView profile;
     ImageView home;
+    TextView nameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,9 @@ public class InstructionsPage extends AppCompatActivity {
         String userName = sf.getString("username","");
         String gender = sf.getString("gender","");
 
+
+        nameView = findViewById(R.id.nameImgPage);
+        nameView.setText(userName);
 
         profile = findViewById(R.id.avatar);
         if(gender.toLowerCase().equals("male")){

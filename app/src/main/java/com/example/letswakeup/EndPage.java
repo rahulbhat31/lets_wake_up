@@ -65,4 +65,10 @@ public class EndPage extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(EndPage.this, HomePage.class);
+        startActivity(intent);
+        finish();
+    }
 }

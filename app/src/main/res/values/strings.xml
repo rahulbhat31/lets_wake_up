@@ -34,46 +34,46 @@
 
     <string-array name="env_question">
         <item>"Environment can be kept clean and green by using, less energy, environment friendly technology, protecting wildlife, all of them, all of them, All of the above actions help in saving the Environment" </item>
-        <item>"People should be banned to hunt in forest or collect wild plants to ensure protection of, wild life, ecosystem, food chain, food web, wild life, Wildlife can be protected by have strict forest rules"</item>
+        <item>"People should be banned to hunt in forest or collect wild plants to ensure protection of, wild life, ecosystem, food chain, food web, wild life, Wildlife can be protected by having strict forest rules"</item>
         <item>"Technology can be use to harness renewable sources of, energy, food, light, heat, energy, Energy can be harnessed using technology"</item>
         <!--<item>" Reduce, reuse and recycle can conserve our, environment, food, climate, oxygen, environment, All these actions help us in conserving Environment"</item>-->
     </string-array>
     <string-array name="water_pollution_question">
-        <item>"what is the main cause of water pollution?, humans, animals, plants, invasive species, humans, Humans are the main cause of water pollution" </item>
-        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, all of the above is the right answer"</item>
-        <item>"what is water pollution?, water being contaminated with pollutants, when you get water dirty, when fish over populate a lake, when your water tastes bad, water being contaminated with pollutants, water being contaminated with pollutants is the right answer"</item>
+        <item>"What is the main cause of water pollution?, humans, animals, plants, invasive species, humans, Humans are the main cause of water pollution" </item>
+        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, Water pollution can damage all parts of the enviornment"</item>
+        <item>"What is water pollution?, water being contaminated with pollutants, when you get water dirty, when fish over populate a lake, when your water tastes bad, water being contaminated with pollutants, Pollutants are the main cause of water pollution"</item>
     </string-array>
     <string-array name="water_crisis_question">
-        <item>"what percent of earth is drinkable water, 45, 10, 3, 7, 10, 10 is the right answer" </item>
-        <item>"About how many gallons of water does the average household use per day?, 1000, 367, 300, 400, 1000, 1000 is the right answer"</item>
-        <item>"what is one way you can conserve water?, take shorter showers, drink a lot of water, water your lawn daily, keep your faucet running, take shorter showers, take shorter showers is the right answer"</item>
+        <item>"What percent of earth is drinkable water, 45, 10, 3, 7, 10, around 1/10th of " </item>
+        <item>"About how many gallons of water does the average household use per day?, 1000, 367, 300, 400, 1000, Maximum water is used for house hold actions"</item>
+        <item>"What is one way you can conserve water?, take shorter showers, drink a lot of water, water your lawn daily, keep your faucet running, take shorter showers, Long showers are the major reason of water wastage"</item>
     </string-array>
     <string-array name="global_warming_question">
-        <item>"Global warming also refers to as, Climate change, Ecological change, Atmosphere change, None of the above, Climate change, Climate change causes global warming" </item>
-        <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, All of the above is the right answer"</item>
+        <item>"Global warming also refers to as, Climate change, Ecological change, Atmosphere change, None of the above, Climate change, Climate change and global warming are closely related" </item>
+        <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, Global warming has effects in all the sectors of Enviornment"</item>
         <item>"Which of the following is not a greenhouse gas?, Carbon di-oxide, Methane, Nitrous oxide, Carbon monoxide, Carbon monoxide, Carbon monoxide is the right answer"</item>
     </string-array>
 
 
     <string-array name="img_env_question">
-        <item>"Which of the following steps help us save environment, plant_tree, env12, env13, env14, env12, plant_tree is the right answer" </item>
-        <item>"which of the following damages our environment, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"What can you do to save environment, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"Which of the following steps help us save environment, env11, env12, env13, env14, img1, env11 is the right answer" </item>
+        <item>"which of the following damages our environment, env11, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"What can you do to save environment, env11, img2, img3, img4, img3, img3 is the right answer" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
-        <item>"which of the following causes water pollution, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which of the following helps prevent water pollution, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
-        <item>"What are the affects of water pollution, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"which of the following causes water pollution, env11, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"which of the following helps prevent water pollution, env11, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"What are the affects of water pollution, env11, img2, img3, img4, img2, img2 is the right answer" </item>
     </string-array>
     <string-array name="img_water_crisis_question">
-        <item>"Which of the following adds up to water crisis, plant_tree, img2, img2, img2, plant_tree, plant_tree is the right answer" </item>
+        <item>"Which of the following adds up to water crisis, env11, img2, img2, img2, img1, img1 is the right answer" </item>
         <item>"which of the following can help us prevent water crisis, img2, img3, img4, img4, img4 is the right answer" </item>
-        <item>"which are the affects of water crisis, plant_tree, img2, img3, img4, img1, img1 is the right answer" </item>
+        <item>"which are the affects of water crisis, env11, img2, img3, img4, img1, img1 is the right answer" </item>
     </string-array>
     <string-array name="img_global_warming_question">
-        <item>"What is the cause of global warming, plant_tree, img2, img3, img4, img2, img2 is the right answer" </item>
-        <item>"What helps us prevent global warming, plant_tree, img2, img3, img4, img3, img3 is the right answer" </item>
-        <item>"What is the affect of global warming, plant_tree, img2, img3, img4, img4, img4 is the right answer" </item>
+        <item>"What is the cause of global warming, env11, img2, img3, img4, img2, img2 is the right answer" </item>
+        <item>"What helps us prevent global warming, env11, img2, img3, img4, img3, img3 is the right answer" </item>
+        <item>"What is the affect of global warming, env11, img2, img3, img4, img4, img4 is the right answer" </item>
     </string-array>
 
 </resources>

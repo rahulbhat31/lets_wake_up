@@ -61,7 +61,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
     int currentSectionScore;
     int currentTotalScore;
-
+    ImageView home;
     SharedPreferences sPreference;
 
     int questionNumber;
@@ -104,6 +104,15 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         }
         profile = (ImageView)findViewById(R.id.avatar);
 
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ImageQuestionActivity.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
 
         wrongAns = (TextView) findViewById(R.id.wrongImgAnsStr);
         rightAns = (TextView) findViewById(R.id.rightImgAnsStr);
