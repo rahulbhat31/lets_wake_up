@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="392dp"
         android:orientation="vertical"
         android:weightSum="5">
 
@@ -22,8 +22,7 @@
             android:layout_marginLeft="400dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="100dp"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,7 +33,7 @@
             <ImageView
                 android:id="@+id/runningTap"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="110dp"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/tap" />
@@ -49,7 +48,6 @@
                 android:layout_weight="1"
                 android:rotation="270"
                 app:srcCompat="@drawable/shower" />
-
 
 
         </LinearLayout>
@@ -85,9 +83,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0/2"
-                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
                 android:textSize="36dp"
-                android:textColor="@color/colorWhite" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tutGWGameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Find all items that are  causing Water Crisis and earn points"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
         </LinearLayout>
 
 

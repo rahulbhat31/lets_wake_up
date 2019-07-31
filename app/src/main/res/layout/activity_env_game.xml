@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="70dp"
             android:layout_weight="1">
 
             <TextView
@@ -66,6 +66,16 @@
                 android:textStyle="bold"
                 android:textSize="36dp"
                 android:textColor="@color/colorWhite" />
+            <TextView
+                android:id="@+id/tutGWGameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Find all items that are harming environment and earn points"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"/>
         </LinearLayout>
+
 
 </LinearLayout>

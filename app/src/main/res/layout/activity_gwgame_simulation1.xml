@@ -120,7 +120,7 @@
             android:id="@+id/tutGWGameTxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Find all items that are harming environment and earn points"
+            android:text="Find all items that are harming water and earn points"
             android:textSize="20dp"
             android:textAlignment="center"
             android:textColor="@color/colorFluorescentDark"/>
