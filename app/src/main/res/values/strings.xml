@@ -73,7 +73,7 @@
     <string-array name="img_global_warming_question">
         <item>"What is the cause of global warming, gbw11, gbw12, gbw13, gbw14, img4, img4 is the right answer" </item>
         <item>"What helps us prevent global warming, gbw11, gbw14, env12, env13, img1, img1 is the right answer" </item>
-        <item>"What is the not effect of global warming, gbw31, gbw32, gbw33, gbw34, img3, img3 is the right answer" </item>
+        <item>"Which of these is not a effect of global warming, gbw31, gbw32, gbw33, gbw34, img3, img3 is the right answer" </item>
     </string-array>
 
 </resources>

@@ -25,6 +25,7 @@ public class EnvGame extends AppCompatActivity {
     String questionType;
     int totalAquiredScore;
 
+    TextView gwTutorialTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class EnvGame extends AppCompatActivity {
         thrownwaste = (ImageView) findViewById(R.id.thrownwaste);
         saw = (ImageView) findViewById(R.id.saw);
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
+        gwTutorialTxt = (TextView) findViewById(R.id.tutGWGameTxt);
+
 
         saw.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +55,8 @@ public class EnvGame extends AppCompatActivity {
                     startActivity(intent);
                 }
                 saw.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
 
             }
@@ -72,6 +77,8 @@ public class EnvGame extends AppCompatActivity {
                     startActivity(intent);
                 }
                 thrownwaste.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
             }
         });

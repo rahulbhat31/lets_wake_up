@@ -24,6 +24,7 @@ public class WaterCrisis extends AppCompatActivity {
     SharedPreferences sPreference;
     String questionType;
     int totalAquiredScore;
+    TextView gwTutorialTxt;
 
 
     @Override
@@ -37,6 +38,7 @@ public class WaterCrisis extends AppCompatActivity {
         tap = (ImageView) findViewById(R.id.runningTap);
         shower = (ImageView) findViewById(R.id.runningShower);
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
+        gwTutorialTxt = (TextView) findViewById(R.id.tutGWGameTxt);
 
         shower.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,8 @@ public class WaterCrisis extends AppCompatActivity {
                     startActivity(intent);
                 }
                 shower.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
 
             }
@@ -72,6 +76,8 @@ public class WaterCrisis extends AppCompatActivity {
                     startActivity(intent);
                 }
                 tap.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
             }
         });

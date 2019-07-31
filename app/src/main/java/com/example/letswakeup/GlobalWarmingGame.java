@@ -25,6 +25,7 @@ public class GlobalWarmingGame extends AppCompatActivity {
     String questionType;
     int totalAquiredScore;
 
+    TextView gwTutorialTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class GlobalWarmingGame extends AppCompatActivity {
         carsmoke = (ImageView) findViewById(R.id.carsmoke);
         factory = (ImageView) findViewById(R.id.factory);
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
+        gwTutorialTxt = (TextView) findViewById(R.id.tutGWGameTxt);
 
         factory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,8 @@ public class GlobalWarmingGame extends AppCompatActivity {
                     startActivity(intent);
                 }
                 factory.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
 
             }
@@ -72,6 +76,8 @@ public class GlobalWarmingGame extends AppCompatActivity {
                     startActivity(intent);
                 }
                 carsmoke.setVisibility(View.INVISIBLE);
+                gwTutorialTxt.setText("It's right!! you get one point Find Next");
+
 
             }
         });
