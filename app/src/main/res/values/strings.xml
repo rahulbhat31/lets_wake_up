@@ -40,7 +40,7 @@
     </string-array>
     <string-array name="water_pollution_question">
         <item>"What is the main cause of water pollution?, humans, animals, plants, invasive species, humans, Humans are the main cause of water pollution" </item>
-        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, Water pollution can damage all parts of the enviornment"</item>
+        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, Water pollution can damage all aspects of the enviornment"</item>
         <item>"What is water pollution?, water being contaminated with pollutants, when you get water dirty, when fish over populate a lake, when your water tastes bad, water being contaminated with pollutants, Pollutants are the main cause of water pollution"</item>
     </string-array>
     <string-array name="water_crisis_question">
@@ -51,7 +51,7 @@
     <string-array name="global_warming_question">
         <item>"Global warming also refers to as, Climate change, Ecological change, Atmosphere change, None of the above, Climate change, Climate change and global warming are closely related" </item>
         <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, Global warming has effects in all the sectors of Enviornment"</item>
-        <item>"Which of the following is not a greenhouse gas?, Carbon di-oxide, Methane, Nitrous oxide, Carbon monoxide, Carbon monoxide, Carbon monoxide is the right answer"</item>
+        <item>"Which of the following is not a greenhouse gas?, Carbon di-oxide, Methane, Nitrous oxide, Carbon monoxide, Carbon monoxide, Carbon monoxide is not harmful to nature"</item>
     </string-array>
 
 
@@ -66,9 +66,9 @@
         <item>"Which of these is not a effect of global warming, gbw31, gbw32, gbw33, gbw34, img3, Global warming damages our greenery" </item>
     </string-array>
     <string-array name="img_water_pollution_question">
-        <item>"which of the following causes water pollution, wp11, wp12, wp13, wp14, img1, plastic takes 1000years to decompose " </item>
+        <item>"which of the following causes water pollution, wp11, wp12, wp13, wp14, img1, plastic takes approximately 1000 years to decompose" </item>
         <item>"which of the following helps prevent water pollution, wp21, wp22, wp23, wp24, img3, Garbage disposal should be given a thought" </item>
-        <item>"What are the affects of water pollution, wp31, wp32, wp33, wp34, img4,  World can become inhabitable" </item>
+        <item>"What are the affects of water pollution, wp31, wp32, wp33, wp34, img4,  World can become inhabitable place for all sorts of life" </item>
     </string-array>
     <string-array name="img_water_crisis_question">
         <item>"Which of the following adds up to water crisis, wc11, wc12, wc13, wc14, img1, Save water " </item>
