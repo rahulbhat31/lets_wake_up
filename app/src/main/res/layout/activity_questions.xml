@@ -47,9 +47,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:text="Which one of these causes global warming?"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/button_back"/>
 
         <RadioGroup
             android:id="@+id/radioGroupID"
