@@ -22,6 +22,10 @@ public class profile extends AppCompatActivity {
     TextView p_userName;
     ImageView home;
 
+    ImageView star1;
+    ImageView star2;
+    ImageView star3;
+    ImageView star4;
 
 
     @Override
@@ -36,7 +40,32 @@ public class profile extends AppCompatActivity {
         gender = findViewById(R.id.gender);
         email = findViewById(R.id.email);
         dob = findViewById(R.id.dob);
+
+        star1 = findViewById(R.id.star1);
+        star2 = findViewById(R.id.star2);
+        star3 = findViewById(R.id.star3);
+        star4 = findViewById(R.id.star4);
+
+
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        SharedPreferences scorepref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+
+
+        int total = scorepref.getInt(getString(R.string.total_score), 0);
+
+        if(total >= 100){
+            star1.setImageResource(R.drawable.star1);
+        }
+        if(total >= 200){
+            star2.setImageResource(R.drawable.star2);
+        }
+        if(total >= 300){
+            star3.setImageResource(R.drawable.star3);
+        }
+        if(total >= 400){
+            star4.setImageResource(R.drawable.star4);
+        }
 
         String userName = sf.getString("username","");
         name.setText(userName);
@@ -70,6 +99,8 @@ public class profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 }

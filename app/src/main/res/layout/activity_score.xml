@@ -35,24 +35,64 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        >
     <TextView
         android:id="@+id/pointsTxt"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:text="POINTS"
-        android:textAlignment="center"
+        android:text="Points"
         android:textSize="32sp" />
-    <TextView
-        android:id="@+id/pointsID"
+        <TextView
+            android:id="@+id/badgetext"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Badge earned"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="50dp"
-        android:text="0"
-        android:textAlignment="center"
-        android:textSize="100sp" />
+        android:layout_height="220dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/pointsID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="100sp" />
+
+        <ImageView
+            android:id="@+id/badgeImg"
+            android:layout_width="0dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/lock1"
+            android:text="BADGE"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -140,11 +180,13 @@
 
     <Button
         android:id="@+id/section_score"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/colorPrimary"
-        android:text="Sectionwise Score"
+        android:layout_margin="15dp"
+        android:background="@drawable/button_back"
+        android:text="Check Sectionwise Scores"
         android:textSize="20sp" />
+
 
 </LinearLayout>

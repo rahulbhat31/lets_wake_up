@@ -1,6 +1,7 @@
 package com.example.letswakeup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,10 +14,10 @@ import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
     TextView nameView;
-    Button env ;
-    Button global_warmning;
-    Button water_pollution;
-    Button water_crisis;
+    CardView env ;
+    CardView global_warmning;
+    CardView water_pollution;
+    CardView water_crisis;
     ImageView profile;
 
     @Override

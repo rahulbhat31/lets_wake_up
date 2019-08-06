@@ -25,12 +25,14 @@ public class ScoreActivity extends AppCompatActivity {
     double perc = 100;
     ProgressBar env;
     TextView ttlPoints;
+    ImageView badge;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        badge = findViewById(R.id.badgeImg);
         name = findViewById(R.id.userName);
         ttlPoints = findViewById(R.id.pointsID);
         SharedPreferences sfu = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
@@ -51,6 +53,23 @@ public class ScoreActivity extends AppCompatActivity {
         /*pbar = findViewById(R.id.pb);
         pbar.setProgress(new_score_int);*/
         ttlPoints.setText(Integer.toString(new_score_int));
+
+
+        int total_s = sf.getInt(getString(R.string.total_score), 0);
+
+
+        if(total_s >= 100){
+            badge.setImageResource(R.drawable.star1);
+        }
+        if(total_s >= 200){
+            badge.setImageResource(R.drawable.star2);
+        }
+        if(total_s >= 300){
+            badge.setImageResource(R.drawable.star3);
+        }
+        if(total_s >= 400){
+            badge.setImageResource(R.drawable.star4);
+        }
 
 
         home = (ImageView)findViewById(R.id.home);

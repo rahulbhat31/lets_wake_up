@@ -4,80 +4,319 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage"
-
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".HomePage">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:background="@color/colorFluorescentLight">
+
         <TextView
             android:id="@+id/name"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="rahul"
             android:layout_marginLeft="20dp"
-            android:textSize="50sp"
-            android:textColor="#FFFFFF"/>
+            android:layout_weight="1"
+            android:text="rahul"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp" />
 
         <ImageView
             android:id="@+id/avatar"
             android:layout_width="60dp"
             android:layout_height="80dp"
             android:layout_gravity="right"
-            android:src="@drawable/iconfinder_11_2694133"/>
+            android:src="@drawable/iconfinder_11_2694133" />
 
 
     </LinearLayout>
-    <LinearLayout
-    android:layout_marginTop="30dp"
+    <!--<LinearLayout-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:orientation="vertical">-->
+    <!--<Button-->
+    <!--android:id="@+id/env"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Enviornment"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:padding="20dp"-->
+    <!--android:layout_margin="25dp"-->
+    <!--android:backgroundTint="@color/colorBrown"-->
+    <!--android:textColor="@color/colorWhite"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/global_warming"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="Global Warming"-->
+    <!--android:padding="20dp"-->
+    <!--android:layout_margin="25dp"-->
+    <!--android:backgroundTint="@color/colorBrown"-->
+    <!--android:textColor="@color/colorWhite"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/water_pollu"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="Water Pollution"-->
+    <!--android:padding="20dp"-->
+    <!--android:layout_margin="25dp"-->
+    <!--android:backgroundTint="@color/colorBrown"-->
+    <!--android:textColor="@color/colorWhite"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/water_crii"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="Water Crisis"-->
+    <!--android:padding="20dp"-->
+    <!--android:layout_margin="25dp"-->
+    <!--android:backgroundTint="@color/colorBrown"-->
+    <!--android:textColor="@color/colorWhite"/>-->
+
+    <!--</LinearLayout>-->
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="3"
-    android:orientation="vertical">
-    <Button
+    android:layout_weight="3">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/env"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Enviornment"
-        android:layout_gravity="center"
-        android:padding="20dp"
-        android:layout_margin="25dp"
-        android:backgroundTint="@color/colorBrown"
-        android:textColor="@color/colorWhite"/>
-    <Button
-        android:id="@+id/global_warming"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Global Warming"
-        android:padding="20dp"
-        android:layout_margin="25dp"
-        android:backgroundTint="@color/colorBrown"
-        android:textColor="@color/colorWhite"/>
-    <Button
-        android:id="@+id/water_pollu"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Water Pollution"
-        android:padding="20dp"
-        android:layout_margin="25dp"
-        android:backgroundTint="@color/colorBrown"
-        android:textColor="@color/colorWhite"/>
-    <Button
-        android:id="@+id/water_cri"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Water Crisis"
-        android:padding="20dp"
-        android:layout_margin="25dp"
-        android:backgroundTint="@color/colorBrown"
-        android:textColor="@color/colorWhite"/>
-</LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        card_view:cardCornerRadius="4dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/plant_tree"
+                android:scaleType="fitXY"
+                />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Heyy"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/water_cri"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="6"-->
+        <!--android:layout_margin="30dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorPrimary"/>-->
+
+
+        <!--<Button-->
+        <!--android:id="@+id/water_crii"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="6"-->
+        <!--android:layout_margin="30dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:background="@color/colorAccent"/>-->
+
+        <!--</LinearLayout>-->
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/water_cri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/water_save" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Heyy"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hello"
+                    android:textColor="#555" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/water_pollu"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/water_pollu_save" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Heyy"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="hello"
+                        android:textColor="#555" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/global_warming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/global1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Heyy"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="hello"
+                        android:textColor="#555" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/xd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>
 </LinearLayout>
