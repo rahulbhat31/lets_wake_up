@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -205,6 +206,7 @@ public class TopicVideoPage extends AppCompatActivity {
 
         if(topic.equals(getString(R.string.environment)))
         {
+            //Log.d("environmentcompleted", String.valueOf(sPreference.getInt(getString(R.string.env_section_completed_flag), 0) == 1));
             sectionCompleted = (sPreference.getInt(getString(R.string.env_section_completed_flag), 0) == 1) ? true: false;
         }
         else if(topic.equals(getString(R.string.water_pollution)))

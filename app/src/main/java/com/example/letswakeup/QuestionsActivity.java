@@ -12,6 +12,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -117,39 +118,43 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             }
         });
 
+        // submit button changes
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
                 int selectedId = radioGroup.getCheckedRadioButtonId();
-                selectedButton = (RadioButton) findViewById(selectedId);
-                responseText = selectedButton.getText().toString();
-
-
-                if(responseText.equals(answer))
+                if(selectedId == -1)
                 {
-                    canGoToNext = true;
-                    increaseScore();
-                    setNextQuestionNumber();
-                    wrongAns.setVisibility(View.GONE);
-                    rightAns.setVisibility(View.VISIBLE);
-                    submitBtn.setVisibility(View.GONE);
-                    shakeph.setVisibility(View.VISIBLE);
-                    tutQuestionPageText.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Please select one option", Toast.LENGTH_SHORT).show();
+                    Log.d("QAOD", "No option selected for question");
                 }
                 else
                 {
-                    tutQuestionPageText.setVisibility(View.GONE);
-                    shakeph.setVisibility(View.GONE);
-                    rightAns = (TextView) findViewById(R.id.rightAnsStr);
-                    rightAns.setVisibility(View.GONE);
-                    wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
-                    wrongAns.setText(wrongAnsResponse);
-                    wrongAns.setVisibility(View.VISIBLE);
+                    selectedButton = (RadioButton) findViewById(selectedId);
+                    responseText = selectedButton.getText().toString();
+
+                    if(responseText.equals(answer))
+                    {
+                        canGoToNext = true;
+                        increaseScore();
+                        setNextQuestionNumber();
+                        wrongAns.setVisibility(View.GONE);
+                        rightAns.setVisibility(View.VISIBLE);
+                        submitBtn.setVisibility(View.GONE);
+                        tutQuestionPageText.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        tutQuestionPageText.setVisibility(View.GONE);
+                        rightAns = (TextView) findViewById(R.id.rightAnsStr);
+                        rightAns.setVisibility(View.GONE);
+                        wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
+                        wrongAns.setText(wrongAnsResponse);
+                        wrongAns.setVisibility(View.VISIBLE);
+                    }
                 }
-
-
             }
         });
 
