@@ -25,7 +25,7 @@
         <ImageView
             android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_gravity="right"
             android:src="@drawable/home" />
     </LinearLayout>
@@ -180,12 +180,12 @@
 
     <Button
         android:id="@+id/section_score"
-        android:layout_width="match_parent"
+        android:layout_width="174dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:background="@drawable/button_back"
-        android:text="Check Sectionwise Scores"
+        android:background="@drawable/buttonshape"
+        android:text="more info"
+        android:textColor="@color/colorWhite"
         android:textSize="20sp" />
 
 

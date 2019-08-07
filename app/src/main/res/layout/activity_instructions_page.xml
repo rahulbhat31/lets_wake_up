@@ -60,16 +60,17 @@
 the image. You have to tap on objects that are not suitable or harmly for the senario.
 Earn all the points to complete the section. Score displayed at bottom left "
             android:textSize="22sp" />
+
         <Button
             android:id="@+id/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Lets Play"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
             android:layout_gravity="center"
-            />
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonshape"
+            android:text="Lets Play"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>

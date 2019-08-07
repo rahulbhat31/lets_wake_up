@@ -27,7 +27,7 @@
         <ImageView
             android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
 
             android:layout_gravity="right"
             android:src="@drawable/home" />
@@ -49,12 +49,12 @@
                 android:layout_weight="1.5"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="40sp"
-                android:text="Enviornment"
-                />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Environment"
+                    android:textSize="24sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,12 +87,12 @@
                 android:layout_weight="1.5"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40sp"
                     android:text="Global Warming"
-                    />
+                    android:textSize="24sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -125,12 +125,12 @@
                 android:layout_weight="1.5"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="35sp"
                     android:text="Water Pollution"
-                    />
+                    android:textSize="24sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -164,12 +164,12 @@
                 android:layout_weight="1.5"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40sp"
                     android:text="Water Crisis"
-                    />
+                    android:textSize="24sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

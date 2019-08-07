@@ -48,11 +48,11 @@ public class ScoreActivity extends AppCompatActivity {
 
         progressScore = env_score + gw_score+ wc_score+ wp_score;
 
-        double new_score = Math.floor((progressScore/total)*perc);
-        int new_score_int = (int)new_score;
+        /*double new_score = Math.floor((progressScore/total)*perc);
+        int new_score_int = (int)new_score;*/
         /*pbar = findViewById(R.id.pb);
         pbar.setProgress(new_score_int);*/
-        ttlPoints.setText(Integer.toString(new_score_int));
+        ttlPoints.setText(Integer.toString(progressScore));
 
 
         int total_s = sf.getInt(getString(R.string.total_score), 0);

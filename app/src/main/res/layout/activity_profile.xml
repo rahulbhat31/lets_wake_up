@@ -20,12 +20,13 @@
             android:layout_marginLeft="20dp"
             android:textSize="50sp"
             android:textColor="#FFFFFF"/>
+
         <ImageView
             android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_gravity="right"
-            android:src="@drawable/home"/>
+            android:src="@drawable/home" />
 
     </LinearLayout>
 
@@ -123,14 +124,15 @@
 
         <Button
             android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_margin="15dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
             android:layout_gravity="center"
-            android:textSize="20sp"
-            android:background="@drawable/button_back"
-            android:text="Check Score and Rewards" />
+            android:layout_marginTop="50dp"
+            android:background="@drawable/buttonshape"
+            android:text="Check your Score"
+            android:textColor="@color/colorWhite" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -219,9 +221,6 @@
                     android:layout_gravity="center"
                     android:textSize="16sp"/>
             </LinearLayout>
-
            </LinearLayout>
-
-
     </LinearLayout>
 </LinearLayout>
