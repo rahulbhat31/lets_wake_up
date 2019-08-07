@@ -9,7 +9,9 @@
     <color name="colorBrown">#CC000000</color>
     <color name="colorRed">#ff0000</color>
     <color name="colorGreen">#a4c639 </color>
-    <color name="colorFluorescent">#3039ff14</color>
     <color name="colorFluorescentLight">#2039ff14</color>
     <color name="colorFluorescentDark">#39ff14</color>
+    <color name="lightbluesky">#243665</color>
+    <color name="colorFluorescent">#3039ff14</color>
+
 </resources>
