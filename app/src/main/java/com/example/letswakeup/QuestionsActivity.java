@@ -19,6 +19,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.hardware.SensorManager;
+import android.widget.Toast;
 
 public class QuestionsActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -63,6 +64,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
     String[] quesArr;
     String wrongAnsResponse;
 
+    ImageView shakeph ;
     boolean canGoToNext = false;
 
 
@@ -80,7 +82,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
-
+        shakeph = findViewById(R.id.shakephone);
         getQuestionnaireAndQuestion();
 
         profile = (ImageView)findViewById(R.id.avatar);
@@ -119,9 +121,11 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             @Override
             public void onClick(View view) {
 
+
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 selectedButton = (RadioButton) findViewById(selectedId);
                 responseText = selectedButton.getText().toString();
+
 
                 if(responseText.equals(answer))
                 {
@@ -131,11 +135,13 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                     wrongAns.setVisibility(View.GONE);
                     rightAns.setVisibility(View.VISIBLE);
                     submitBtn.setVisibility(View.GONE);
+                    shakeph.setVisibility(View.VISIBLE);
                     tutQuestionPageText.setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     tutQuestionPageText.setVisibility(View.GONE);
+                    shakeph.setVisibility(View.GONE);
                     rightAns = (TextView) findViewById(R.id.rightAnsStr);
                     rightAns.setVisibility(View.GONE);
                     wrongAns = (TextView) findViewById(R.id.wrongAnsStr);

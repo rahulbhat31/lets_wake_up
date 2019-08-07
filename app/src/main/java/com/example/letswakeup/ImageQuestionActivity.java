@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ImageQuestionActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -129,6 +130,11 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         submitImgAnsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(imgClicked == null)
+                {
+                    Toast.makeText(getApplicationContext(),"Please select an image",Toast.LENGTH_SHORT).show();
+                }
+                else{
                 if(clickedImageName.equals(answerImgName))
                 {
                     canGoToNext = true;
@@ -149,7 +155,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     imgPageTutorialTxt.setVisibility(View.GONE);
                     wrongAns.setVisibility(View.VISIBLE);
                 }
-            }
+            }}
         });
 
         option1Img.setOnClickListener(new View.OnClickListener() {
@@ -378,6 +384,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             Drawable bgwhiteImg= ContextCompat.getDrawable(getApplicationContext(), R.drawable.whitebdg);
             imgClicked.setBackground(bgwhiteImg);
             imgClicked.setPressed(false);
+            imgClicked = null;
             getQuestionnaireAndQuestion();
             submitImgAnsBtn.setVisibility(View.VISIBLE);
             imgPageTutorialTxt.setVisibility(View.GONE);
