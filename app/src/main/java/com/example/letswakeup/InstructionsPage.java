@@ -86,6 +86,14 @@ public class InstructionsPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InstructionsPage.this, profile.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

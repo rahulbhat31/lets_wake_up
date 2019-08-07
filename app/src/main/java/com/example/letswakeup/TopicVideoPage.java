@@ -141,9 +141,27 @@ public class TopicVideoPage extends AppCompatActivity {
                     }
                     else
                     {
-                        Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
-                        intent.putExtra(getString(R.string.question_type), topic);
-                        startActivity(intent);
+                        if(topic.equals(getString(R.string.environment))){
+                            Intent intent = new Intent(TopicVideoPage.this, EnvGame.class);
+                            intent.putExtra(getString(R.string.question_type), topic);
+                            startActivity(intent);
+                        }
+                        else if(topic.equals(getString(R.string.water_pollution))){
+                            Intent intent = new Intent(TopicVideoPage.this, GWGameSimulation1.class);
+                            intent.putExtra(getString(R.string.question_type), topic);
+                            startActivity(intent);
+                        }
+                        else if(topic.equals(getString(R.string.global_warming))){
+                            Intent intent = new Intent(TopicVideoPage.this, GlobalWarmingGame.class);
+                            intent.putExtra(getString(R.string.question_type), topic);
+                            startActivity(intent);
+                        }
+                        else if(topic.equals(getString(R.string.water_crisis))) {
+                            Intent intent = new Intent(TopicVideoPage.this, WaterCrisis.class);
+                            intent.putExtra(getString(R.string.question_type), topic);
+                            startActivity(intent);
+                        }
+
                     }
                 }
                 else if(questionNumber > 2)
@@ -238,8 +256,28 @@ public class TopicVideoPage extends AppCompatActivity {
     private void setQuestionNumberForImageQuestion(){
         if(questionNumber > 2)
         {
-            int newQuestNo = sPreference.getInt(getString(R.string.img_env_ques_no), 0) + questionNumber;
-            questionNumber = newQuestNo;
+
+            if(topic.equals(getString(R.string.environment)))
+            {
+                int newQuestNo = sPreference.getInt(getString(R.string.img_env_ques_no), 0) + questionNumber;
+                questionNumber = newQuestNo;
+            }
+            else if(topic.equals(getString(R.string.water_pollution)))
+            {
+                int newQuestNo = sPreference.getInt(getString(R.string.img_water_poll_ques_no), 0) + questionNumber;
+                questionNumber = newQuestNo;
+            }
+            else if(topic.equals(getString(R.string.global_warming)))
+            {
+                int newQuestNo = sPreference.getInt(getString(R.string.img_global_warming_ques_no), 0) + questionNumber;
+                questionNumber = newQuestNo;
+            }
+            else if(topic.equals(getString(R.string.water_crisis)))
+            {
+                int newQuestNo = sPreference.getInt(getString(R.string.img_water_crisis_ques_no), 0) + questionNumber;
+                questionNumber = newQuestNo;
+            }
+
         }
     }
 

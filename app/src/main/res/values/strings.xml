@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Lets wake up</string>
 
-    <string name="env_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
-    <string name="wp_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
-    <string name="wc_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
-    <string name="gw_section_completed_flag">com.example.letswakeup.sectionCompleted</string>
+    <string name="env_section_completed_flag">com.example.letswakeup.envsectionCompleted</string>
+    <string name="wp_section_completed_flag">com.example.letswakeup.wpsectionCompleted</string>
+    <string name="wc_section_completed_flag">com.example.letswakeup.wcsectionCompleted</string>
+    <string name="gw_section_completed_flag">com.example.letswakeup.gwsectionCompleted</string>
 
 
     <string name="env_ques_no">com.example.letswakeup.environmentquestionno</string>

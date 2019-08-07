@@ -85,8 +85,9 @@
 
             <TextView
                 android:id="@+id/waterPollGSID"
-                android:layout_width="wrap_content"
+                android:layout_width="79dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
                 android:text="0/2"
                 android:textColor="@color/colorWhite"
                 android:textSize="36dp"
@@ -97,10 +98,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="Find all items that are  causing global warming and earn points"
-                android:textSize="20dp"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite"/>
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
         </LinearLayout>
 
 
