@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We as developers would really love to know your feedback and reviews."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/editTextemail"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter you feedback / review here"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+
+    <Button
+        android:id="@+id/sendEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Feedback / Review"/>
+
+
+    <ImageView
+        android:layout_width="293dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/thank_you" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developers"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.Ruchitha Midigarahalli Shanmugha Sundar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Rahul Ramanand Bhat"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+
+</LinearLayout>

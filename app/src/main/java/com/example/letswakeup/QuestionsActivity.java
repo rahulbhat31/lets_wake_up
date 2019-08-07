@@ -65,6 +65,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
     String[] quesArr;
     String wrongAnsResponse;
 
+    ImageView shakeph ;
     boolean canGoToNext = false;
 
 
@@ -82,7 +83,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
-
+        shakeph = findViewById(R.id.shakephone);
         getQuestionnaireAndQuestion();
 
         profile = (ImageView)findViewById(R.id.avatar);
@@ -122,6 +123,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             @Override
             public void onClick(View view) {
 
+
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 if(selectedId == -1)
                 {
@@ -153,9 +155,6 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                         wrongAns.setVisibility(View.VISIBLE);
                     }
                 }
-
-
-
             }
         });
 
