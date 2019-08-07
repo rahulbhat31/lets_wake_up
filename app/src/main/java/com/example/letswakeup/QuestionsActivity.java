@@ -117,6 +117,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             }
         });
 
+        // submit button changes
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
