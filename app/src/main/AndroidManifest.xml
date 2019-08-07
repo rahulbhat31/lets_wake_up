@@ -11,11 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EnvGame"
-            android:screenOrientation="landscape" ></activity>
-        <activity android:name=".WaterCrisis"
+        <activity android:name=".SubmitFeedback">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EnvGame"
             android:screenOrientation="landscape" />
-        <activity android:name=".GlobalWarmingGame"
+        <activity
+            android:name=".WaterCrisis"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GlobalWarmingGame"
             android:screenOrientation="landscape" />
         <activity
             android:name=".InstructionsPage"

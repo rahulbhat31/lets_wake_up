@@ -26,6 +26,7 @@ public class profile extends AppCompatActivity {
     ImageView star2;
     ImageView star3;
     ImageView star4;
+    Button feedback;
 
 
     @Override
@@ -100,6 +101,14 @@ public class profile extends AppCompatActivity {
             }
         });
 
+        feedback = findViewById(R.id.feedback);
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(profile.this, SubmitFeedback.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
