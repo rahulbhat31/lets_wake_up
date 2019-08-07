@@ -92,8 +92,8 @@
     <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/env"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         card_view:cardCornerRadius="4dp">
 
         <LinearLayout
@@ -104,55 +104,48 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:src="@drawable/plant_tree"
+                android:src="@drawable/saveenv"
                 android:scaleType="fitXY"
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Heyy"
+                    android:text="Better Environment Better Tomorrow.."
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Click on this card to learn about Environment"
                     android:textColor="#000"
                     android:textSize="18sp" />
+            </LinearLayout>
 
 
         </LinearLayout>
 
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<Button-->
-        <!--android:id="@+id/water_cri"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_weight="6"-->
-        <!--android:layout_margin="30dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:background="@color/colorPrimary"/>-->
-
-
-        <!--<Button-->
-        <!--android:id="@+id/water_crii"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_weight="6"-->
-        <!--android:layout_margin="30dp"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:background="@color/colorAccent"/>-->
-
-        <!--</LinearLayout>-->
-
     </androidx.cardview.widget.CardView>
 
 
-    <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/water_cri"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        card_view:cardCornerRadius="4dp">
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -173,42 +166,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Heyy"
+                    android:text="Lets Make every Drop of Water Count.."
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="25sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="hello"
-                    android:textColor="#555" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Click on this card to learn about Water Crisis"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    />
-            </LinearLayout>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/water_pollu"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            card_view:cardCornerRadius="4dp">
 
-            <LinearLayout
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -229,42 +211,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Heyy"
+                        android:text="Water is Life And Clean Water is Health.."
                         android:textColor="#000"
-                        android:textSize="18sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="hello"
-                        android:textColor="#555" />
+                        android:layout_marginBottom="8dp"
+                        android:text="Click on this card to learn about Water Pollution"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        />
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/x"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/global_warming"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            card_view:cardCornerRadius="4dp">
 
-            <LinearLayout
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -280,37 +250,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Global Warming isn't prediction. Its happening.."
+                        android:textColor="#000"
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Heyy"
+                        android:text="Click on this card to learn about Environment"
                         android:textColor="#000"
                         android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="hello"
-                        android:textColor="#555" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        />
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/xd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
