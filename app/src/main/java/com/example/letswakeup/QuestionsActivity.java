@@ -143,6 +143,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                         wrongAns.setVisibility(View.GONE);
                         rightAns.setVisibility(View.VISIBLE);
                         submitBtn.setVisibility(View.GONE);
+                        shakeph.setVisibility(View.VISIBLE);
                         tutQuestionPageText.setVisibility(View.VISIBLE);
                     }
                     else
@@ -152,6 +153,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                         rightAns.setVisibility(View.GONE);
                         wrongAns = (TextView) findViewById(R.id.wrongAnsStr);
                         wrongAns.setText(wrongAnsResponse);
+                        shakeph.setVisibility(View.GONE);
                         wrongAns.setVisibility(View.VISIBLE);
                     }
                 }
@@ -332,6 +334,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
             wrongAns.setVisibility(View.GONE);
             rightAns.setVisibility(View.GONE);
             tutQuestionPageText.setVisibility(View.GONE);
+            shakeph.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
 
         }
