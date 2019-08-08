@@ -185,7 +185,7 @@
             android:layout_gravity="clip_horizontal|center_horizontal|center_vertical"
             android:layout_marginTop="80dp"
             android:background="@color/colorFluorescent"
-            android:text="Tilt your phone towards right or left for next question"
+            android:text="@string/tilt_inst"
             android:textAlignment="center"
             android:textColor="@color/colorBlack"
             android:textSize="15dp"

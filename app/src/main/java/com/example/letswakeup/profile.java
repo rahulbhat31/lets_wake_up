@@ -28,6 +28,7 @@ public class profile extends AppCompatActivity {
     ImageView star3;
     ImageView star4;
     Button feedback;
+    ImageView help;
 
 
     @Override
@@ -47,7 +48,7 @@ public class profile extends AppCompatActivity {
         star2 = findViewById(R.id.star2);
         star3 = findViewById(R.id.star3);
         star4 = findViewById(R.id.star4);
-
+        help = findViewById(R.id.help);
 
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
@@ -114,6 +115,13 @@ public class profile extends AppCompatActivity {
             }
         });
 
-
+        help = findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(profile.this, Help.class);
+                startActivity(intent);
+            }
+        });
     }
 }

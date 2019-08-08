@@ -154,7 +154,7 @@
             android:layout_marginTop="50dp"
             android:layout_weight="1.5"
             android:background="@color/colorFluorescent"
-            android:text="Tilt your phone towards right or left for next question"
+            android:text="@string/tilt_inst"
             android:textAlignment="center"
             android:textColor="@color/colorBlack"
             android:textSize="15dp"

@@ -22,8 +22,17 @@
             android:textColor="#FFFFFF"/>
 
         <ImageView
+            android:id="@+id/help"
+            android:layout_width="83dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/iconfinder_help_172477" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
             android:id="@+id/home"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="60dp"
             android:layout_gravity="right"
             android:src="@drawable/home" />
@@ -126,21 +135,22 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:orientation="horizontal">
-        <Button
-            android:id="@+id/score"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_gravity="center"
-            android:background="@drawable/buttonshape"
-            android:text="Check your Score"
-            android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonshape"
+                android:text="Check your Score"
+                android:textColor="@color/colorWhite" />
 
             <Button
                 android:id="@+id/feedback"
-                android:layout_width="wrap_content"
+                android:layout_width="146dp"
                 android:layout_height="64dp"
-                android:layout_marginLeft="100dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
                 android:background="@drawable/buttonshape"
                 android:text="Give Feedback"
                 android:textColor="@color/colorWhite" />

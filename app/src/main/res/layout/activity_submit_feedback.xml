@@ -7,7 +7,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="We as developers would really love to know your feedback and reviews."
+        android:text="@string/feedback_str"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="16dp"
@@ -43,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Developers"
+
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="24dp"
@@ -54,18 +55,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1.Ruchitha Midigarahalli Shanmugha Sundar"
+        android:text="@string/developers"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="#e68a88"
         android:textSize="18dp" />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2. Rahul Ramanand Bhat"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="18dp" />
+
 
 
 </LinearLayout>

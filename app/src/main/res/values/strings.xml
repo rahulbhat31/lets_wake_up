@@ -76,4 +76,13 @@
         <item>"which are the affects of water crisis, wc31, wc32, wc33, wc34, img3, World can run out of fresh water if not used judiciously" </item>
     </string-array>
 
+    <string name="tilt_inst">"Tilt your phone towards right or left for next question"</string>
+    <string name="water_cri_game_tut_str">"Find all items that are  causing Water Crisis and earn points"</string>
+    <string name="video_inst">"To learn more watch the video. If you have already seen the video you can skip and go ahead"</string>
+    <string name="feedback_str">"We as developers would really love to know your feedback and reviews."</string>
+    <string name="developers">"♦ Ruchitha Midigarahalli Shanmugha Sundar \n♦ Rahul Bhat"</string>
+    <string name="how_to_play">"♦First select one of the sections from the home page \n♦Watch the video to learn about the section and press on 'Lets play and Learn' \n♦Answer 3 multiple Choice Questions about the section. To move to next question 'SHAKE PHONE' \n♦Answer some image questions based on the section \n♦Next play the game . Tap on the items which are not dangerous in a specific senario. \n♦Check your score in profile page by clicking on 'Check Score'" </string>
+    <string name="how_use_the_app">"How to use the app"</string>
+    <string name="about_app">"About the app"</string>
+    <string name="about_app_text">"Let\'s wake up app is for wants to put an effort to learn about the impact of our actions on Our Earth and want to bring in Changes in their daily life to protect nature. We have made this app fun and interactive by adding a challenging quiz, impactful short clips to watch and games to keep users entertained. This app lets you learn while you earn credit points/ online purchase points. Hoping to see a STRONG impact of awareness!!"</string>
 </resources>

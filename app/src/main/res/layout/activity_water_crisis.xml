@@ -95,7 +95,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="40dp"
-                android:text="Find all items that are  causing Water Crisis and earn points"
+                android:text="@string/water_cri_game_tut_str"
                 android:textAlignment="center"
                 android:textColor="@color/colorBlack"
                 android:textSize="20dp" />
