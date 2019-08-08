@@ -10,7 +10,9 @@
         android:text="We as developers would really love to know your feedback and reviews."
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="16dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/editTextemail"
@@ -43,7 +45,11 @@
         android:text="Developers"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"/>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -51,7 +57,7 @@
         android:text="1.Ruchitha Midigarahalli Shanmugha Sundar"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="18dp" />
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -59,7 +65,7 @@
         android:text="2. Rahul Ramanand Bhat"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="18dp" />
 
 
 </LinearLayout>

@@ -9,8 +9,8 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="704dp"
-        android:layout_height="234dp"
+        android:layout_width="542dp"
+        android:layout_height="217dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -19,36 +19,35 @@
             android:layout_width="280dp"
             android:layout_height="80dp"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="120dp"
             android:rotation="270"
             app:srcCompat="@drawable/saw" />
 
         <ImageView
             android:id="@+id/thrownwaste"
-            android:layout_width="280dp"
-            android:layout_height="80dp"
+            android:layout_width="129dp"
+            android:layout_height="76dp"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="130dp"
 
             app:srcCompat="@drawable/thrownwaste" />
     </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="600dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="92dp"
-                android:layout_height="108dp"
-                android:layout_marginLeft="600dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/dustbin" />
+            app:srcCompat="@drawable/dustbin" />
 
 
-
-        </LinearLayout>
+    </LinearLayout>
 
 
         <LinearLayout
@@ -60,21 +59,23 @@
 
             <TextView
                 android:id="@+id/waterPollGSID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="81dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="40dp"
                 android:text="0/2"
-                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
                 android:textSize="36dp"
-                android:textColor="@color/colorWhite" />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tutGWGameTxt"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="52dp"
                 android:layout_marginLeft="20dp"
                 android:text="Find all items that are harming environment and earn points"
-                android:textSize="20dp"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite"/>
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
         </LinearLayout>
 
 
