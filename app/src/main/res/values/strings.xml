@@ -76,6 +76,16 @@
         <item>"which are the affects of water crisis, wc31, wc32, wc33, wc34, img3, World can run out of fresh water if not used judiciously" </item>
     </string-array>
 
+    <string name="env_quote">"Better Environment Better Tomorrow.."</string>
+    <string name="gb_quote">"Global Warming isn't prediction. Its happening.."</string>
+    <string name="wc_quote">"Lets Make every Drop of Water Count.."</string>
+    <string name="wp_quote">"Water is Life And Clean Water is Health.."</string>
+
+    <string name="click_env_card">"Click on this card to learn about Environment"</string>
+    <string name="click_wp_card">"Click on this card to learn about Water Pollution"</string>
+    <string name="click_gw_card">"Click on this card to learn about Global Warming"</string>
+    <string name="click_wc_card">"Click on this card to learn about Water Crisis"</string>
+
     <string name="tilt_inst">"Tilt your phone towards right or left for next question"</string>
     <string name="water_cri_game_tut_str">"Find all items that are  causing Water Crisis and earn points"</string>
     <string name="video_inst">"To learn more watch the video. If you have already seen the video you can skip and go ahead"</string>

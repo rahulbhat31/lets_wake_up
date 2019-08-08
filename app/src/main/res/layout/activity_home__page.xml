@@ -32,54 +32,6 @@
 
 
     </LinearLayout>
-    <!--<LinearLayout-->
-    <!--android:layout_marginTop="30dp"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="3"-->
-    <!--android:orientation="vertical">-->
-    <!--<Button-->
-    <!--android:id="@+id/env"-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Enviornment"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:padding="20dp"-->
-    <!--android:layout_margin="25dp"-->
-    <!--android:backgroundTint="@color/colorBrown"-->
-    <!--android:textColor="@color/colorWhite"/>-->
-    <!--<Button-->
-    <!--android:id="@+id/global_warming"-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:text="Global Warming"-->
-    <!--android:padding="20dp"-->
-    <!--android:layout_margin="25dp"-->
-    <!--android:backgroundTint="@color/colorBrown"-->
-    <!--android:textColor="@color/colorWhite"/>-->
-    <!--<Button-->
-    <!--android:id="@+id/water_pollu"-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:text="Water Pollution"-->
-    <!--android:padding="20dp"-->
-    <!--android:layout_margin="25dp"-->
-    <!--android:backgroundTint="@color/colorBrown"-->
-    <!--android:textColor="@color/colorWhite"/>-->
-    <!--<Button-->
-    <!--android:id="@+id/water_crii"-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:text="Water Crisis"-->
-    <!--android:padding="20dp"-->
-    <!--android:layout_margin="25dp"-->
-    <!--android:backgroundTint="@color/colorBrown"-->
-    <!--android:textColor="@color/colorWhite"/>-->
-
-    <!--</LinearLayout>-->
 
 <ScrollView
     android:layout_width="match_parent"
@@ -118,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Better Environment Better Tomorrow.."
+                    android:text="@string/env_quote"
                     android:textColor="#000"
                     android:textSize="25sp" />
 
@@ -126,7 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Click on this card to learn about Environment"
+                    android:text="@string/click_env_card"
                     android:textColor="#000"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -166,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Lets Make every Drop of Water Count.."
+                    android:text="@string/wc_quote"
                     android:textColor="#000"
                     android:textSize="25sp" />
 
@@ -174,7 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Click on this card to learn about Water Crisis"
+                    android:text="@string/click_wc_card"
                     android:textColor="#000"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -211,7 +163,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Water is Life And Clean Water is Health.."
+                        android:text="@string/wp_quote"
                         android:textColor="#000"
                         android:textSize="25sp" />
 
@@ -219,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Click on this card to learn about Water Pollution"
+                        android:text="@string/click_wp_card"
                         android:textColor="#000"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -254,7 +206,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Global Warming isn't prediction. Its happening.."
+                        android:text="@string/gb_quote"
                         android:textColor="#000"
                         android:textSize="25sp" />
 
@@ -262,7 +214,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Click on this card to learn about Environment"
+                        android:text="@string/click_gw_card"
                         android:textColor="#000"
                         android:textSize="18sp" />
                 </LinearLayout>
