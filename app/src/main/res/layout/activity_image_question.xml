@@ -55,7 +55,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_back"
             android:gravity="center"
-            android:text="How do u save our enviornment ?"
+            android:text="How do u save our environment ?"
             android:textSize="25sp" />
 
 

@@ -101,7 +101,7 @@
                 android:text="Find all items that are  causing global warming and earn points"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
 

@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         sPreference = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
-        /*sPreference.edit().clear().commit();*/
 
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         String userName = sf.getString("username",null);

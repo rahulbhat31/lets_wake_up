@@ -59,10 +59,6 @@ public class InstructionsPage extends AppCompatActivity {
 
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
-       // Log.d("environmentcompleted", String.valueOf(sf.getInt(getString(R.string.env_section_completed_flag), 0) == 1));
-
-
-
         String userName = sf.getString("username","");
         String gender = sf.getString("gender","");
 
