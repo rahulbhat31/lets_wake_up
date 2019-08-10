@@ -11,13 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/about_app"
-        android:textSize="40sp"/>
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/about_app_text"
         android:background="#e68a88"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:layout_margin="10dp"
         android:padding="10dp"
         />
@@ -25,7 +29,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/how_use_the_app"
-        android:textSize="40sp"/>
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="5dp"/>
 
     <TextView
         android:id="@+id/tv"
@@ -33,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="@string/how_to_play"
         android:background="#e68a88"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:layout_margin="10dp"
         android:padding="10dp"
         />
