@@ -51,10 +51,6 @@ public class profile extends AppCompatActivity {
         help = findViewById(R.id.help);
 
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-
-        //Log.d("environmentcompleted", String.valueOf(sf.getInt(getString(R.string.env_section_completed_flag), 0) == 1));
-
-
         SharedPreferences scorepref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
 

@@ -84,6 +84,7 @@ public class WaterCrisis extends AppCompatActivity {
 
     }
 
+
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();

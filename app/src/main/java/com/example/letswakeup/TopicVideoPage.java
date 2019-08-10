@@ -35,7 +35,6 @@ public class TopicVideoPage extends AppCompatActivity {
     ImageView home;
 
     SharedPreferences sPreference;
-    SharedPreferences.Editor sEditor;
 
     int questionNumber;
 
@@ -49,17 +48,15 @@ public class TopicVideoPage extends AppCompatActivity {
 
 
         topic = getIntent().getStringExtra("topic");
-        WebView youtubeWebView = findViewById(R.id.youtube_web_view); //todo find or bind web view
+        WebView youtubeWebView = findViewById(R.id.youtube_web_view);
+        WebSettings youtubeSettings = youtubeWebView.getSettings();
+
         String env_save = "Vkq_srFGW5I";
         String global_save = "gUhxcdzRgLQ";
         String wat_poll_save = "sYIoPIstObU";
         String water_cri_save = "DgGlVqZkB8A";
         profile = (ImageView)findViewById(R.id.avatar);
 
-
-
-
-        //set Name on top
         name = findViewById(R.id.userName);
         SharedPreferences sf = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
@@ -105,18 +102,9 @@ public class TopicVideoPage extends AppCompatActivity {
 
         typeText.setText(topic);
 
-
-        youtubeWebView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                return false;
-            }
-        });
-
-        WebSettings webSettings = youtubeWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setLoadWithOverviewMode(true);
-        webSettings.setUseWideViewPort(true);
+        youtubeSettings.setJavaScriptEnabled(true);
+        youtubeSettings.setLoadWithOverviewMode(true);
+        youtubeSettings.setUseWideViewPort(true);
 
         youtubeWebView.loadUrl("https://www.youtube.com/embed/" + vid);
 
@@ -193,7 +181,6 @@ public class TopicVideoPage extends AppCompatActivity {
 
 
     private void getQuestionNumber(){
-
 
         if(topic.equals(getString(R.string.environment)))
         {

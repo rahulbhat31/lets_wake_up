@@ -40,7 +40,7 @@
     </string-array>
     <string-array name="water_pollution_question">
         <item>"What is the main cause of water pollution?, humans, animals, plants, invasive species, humans, Humans are the main cause of water pollution" </item>
-        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, Water pollution can damage all aspects of the enviornment"</item>
+        <item>"Water pollution can damage, ecosystems, habitats, foodchains, all of the above, all of the above, Water pollution can damage all aspects of the environment"</item>
         <item>"What is water pollution?, water being contaminated with pollutants, when you get water dirty, when fish over populate a lake, when your water tastes bad, water being contaminated with pollutants, Pollutants are the main cause of water pollution"</item>
     </string-array>
     <string-array name="water_crisis_question">
@@ -50,7 +50,7 @@
     </string-array>
     <string-array name="global_warming_question">
         <item>"Global warming also refers to as, Climate change, Ecological change, Atmosphere change, None of the above, Climate change, Climate change and global warming are closely related" </item>
-        <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, Global warming has effects in all the sectors of Enviornment"</item>
+        <item>"Which of the following is (are) the anticipated effect(s) of Global warming, Rising sea levels, Changing precipitation, Expansion of deserts, All of the above, All of the above, Global warming has effects in all the sectors of Environment"</item>
         <item>"Which of the following is not a greenhouse gas?, Carbon di-oxide, Methane, Nitrous oxide, Carbon monoxide, Carbon monoxide, Carbon monoxide is not harmful to nature"</item>
     </string-array>
 

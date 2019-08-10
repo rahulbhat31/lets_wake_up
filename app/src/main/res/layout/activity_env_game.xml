@@ -64,14 +64,14 @@
                 android:layout_marginBottom="40dp"
                 android:text="0/2"
                 android:textColor="@color/colorWhite"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tutGWGameTxt"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:text="Find all items that are harming environment and earn points"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
