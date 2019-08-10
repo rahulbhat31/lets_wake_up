@@ -40,6 +40,8 @@ public class GlobalWarmingGame extends AppCompatActivity {
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
         gwTutorialTxt = (TextView) findViewById(R.id.tutGWGameTxt);
 
+        // To remove the object on click and increase the score.
+        // Also check if the game is finished or no
         factory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +63,8 @@ public class GlobalWarmingGame extends AppCompatActivity {
             }
         });
 
-
+        // To remove the object on click and increase the score.
+        // Also check if the game is finished or no
         carsmoke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +87,7 @@ public class GlobalWarmingGame extends AppCompatActivity {
 
     }
 
+    // To increase the score based on the section
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();
@@ -109,12 +113,14 @@ public class GlobalWarmingGame extends AppCompatActivity {
     }
 
 
+    // update the score text on screen
     private void updateScoreOnScreen(){
         gameScore = gameScore +1;
         String gameScoreStr = gameScore + "/ " +totalScore;
         gameScoreTxt.setText(gameScoreStr);
     }
 
+    // If game completed set the game completed flag for that section
     private void setSectionCompleted(){
         SharedPreferences.Editor sEditor = sPreference.edit();
 

@@ -182,11 +182,11 @@
 
     <Button
         android:id="@+id/section_score"
-        android:layout_width="174dp"
+        android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
-        android:text="more info"
+        android:text="Check more info"
         android:textColor="@color/colorWhite"
         android:textSize="20sp" />
 

@@ -126,7 +126,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
 
 
-
+        // Validate the correctness and decide on next step
         submitImgAnsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,6 +135,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     Toast.makeText(getApplicationContext(),"Please select an image",Toast.LENGTH_SHORT).show();
                 }
                 else{
+                // If answered right move to next question
                 if(clickedImageName.equals(answerImgName))
                 {
                     canGoToNext = true;
@@ -147,6 +148,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
 
                 }
+                // If answered wrong alert user using a pop up
                 else
                 {
                     rightAns = (TextView) findViewById(R.id.rightImgAnsStr);
@@ -199,6 +201,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
 
     }
 
+    // Set next question number based on the topic
     private void setNextQuestionNumber(){
         SharedPreferences.Editor sEditor = sPreference.edit();
         questionNumber = questionNumber+1;
@@ -218,6 +221,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         sEditor.apply();
     }
 
+    // Actions to be taken on image click
     private void setImageClicked(View view)
     {
         if(imgClicked != null)
@@ -233,6 +237,9 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         clickedImageName = getResources().getResourceEntryName(view.getId());
     }
 
+
+    // Parsing the string to get various aspects of question like question, image names, right answer,
+    // and hint to questions
     private void getQuestionnaireAndQuestion()
     {
 
@@ -257,10 +264,10 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
             questionNumber = sPreference.getInt(getString(R.string.img_water_crisis_ques_no), 0);
         }
         questionStr = questionnaire[questionNumber];
-
         parseAndSetQuestion();
     }
 
+    // Parse question string
     private void parseAndSetQuestion()
     {
         questionTextView = (TextView) findViewById(R.id.imgeTxtQuestionID);
@@ -291,7 +298,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         wrongAns.setText(quesArr[6].trim());
     }
 
-
+    // Increase score when users gets the answer right
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();
@@ -323,6 +330,7 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         finish();
     }
 
+    // Accelerometer values are read to determine if the phone was shook by the user
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         if(canGoToNext == true)
@@ -340,8 +348,10 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
                     long diffTime = (curTime - lastUpdate);
                     lastUpdate = curTime;
 
+                    // caluclating the change in the x, y or z access readings
                     float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
 
+                    // If speed greater than threshold move to next question
                     if (speed > SHAKE_THRESHOLD) {
                         goToNextQuestion();
                     }
@@ -371,6 +381,8 @@ public class ImageQuestionActivity extends AppCompatActivity implements SensorEv
         senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
+    // Deciding on whether to move to next question by resetting objects on Screen on move to next
+    // activity based on question number
     private void goToNextQuestion(){
         canGoToNext = false;
         if(questionNumber >2)

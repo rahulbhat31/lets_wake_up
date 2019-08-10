@@ -52,10 +52,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
 
     int currentSectionScore;
     int currentTotalScore;
-
     public static final String MyPREFERENCES = "MyPrefs" ;
-
-
     SharedPreferences sPreference;
 
     String[] questionnaire;
@@ -170,6 +167,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
 
     }
 
+
+    // Code to reset the items on Questionnaire page
     private void getQuestionnaireAndQuestion()
     {
 
@@ -200,6 +199,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         parseAndSetQuestion();
     }
 
+    // Reading the string document to parse and get the various question aspects like question,
+    // answer, option and hint to answer question
     private void parseAndSetQuestion()
     {
         questionTxtView = (TextView) findViewById(R.id.textQuestionID);
@@ -219,6 +220,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         wrongAnsResponse = quesArr[6].trim();
     }
 
+    // Set next question number based on topic
     private void setNextQuestionNumber(){
         SharedPreferences.Editor sEditor = sPreference.edit();
         questionNumber = questionNumber+1;
@@ -237,6 +239,8 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         sEditor.apply();
     }
 
+
+    // Used to update the section wise score and the total score
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();
@@ -269,6 +273,7 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         finish();
     }
 
+    // Reading accelerometer value to switch to next question
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         if(canGoToNext == true)
@@ -285,8 +290,10 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
                     long diffTime = (curTime - lastUpdate);
                     lastUpdate = curTime;
 
+                    // Caluculating the speed with which user phone was shook
                     float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
 
+                    // If speed greater than threshold switch to next activity
                     if (speed > SHAKE_THRESHOLD) {
                         goToNextQuestion();
                     }
@@ -316,6 +323,9 @@ public class QuestionsActivity extends AppCompatActivity implements SensorEventL
         senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
+
+    // Using the question number decision to switch to another activity or reset the objects of the
+    // current activity to get next question
     private void goToNextQuestion()
     {
         canGoToNext = false;

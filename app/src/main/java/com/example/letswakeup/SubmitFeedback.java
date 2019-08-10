@@ -17,7 +17,7 @@ public class SubmitFeedback extends AppCompatActivity {
         EditText emailtext;
         int REQUEST_CODE = 1;
         String userName;
-        Button startBtn;
+        Button feedbackbtn;
         String user_email;
 
         @Override
@@ -29,10 +29,13 @@ public class SubmitFeedback extends AppCompatActivity {
 
             userName = sf.getString("username","");
             user_email = sf.getString("email","");
-            startBtn = findViewById(R.id.sendEmail);
+            feedbackbtn = findViewById(R.id.sendEmail);
             emailtext =  findViewById(R.id.editTextemail);
 
-            startBtn.setOnClickListener(new View.OnClickListener() {
+
+            // get the feedback string user has written and using Intent
+            // go to Emailing app and send the feedback to developer
+            feedbackbtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     String[] developers = {"rahulbhat1203@yahoo.in", "midigarahallishanm.r@husky.neu.edu"};
                     Intent emailSending = new Intent(Intent.ACTION_SEND);

@@ -36,24 +36,29 @@ public class SectionsScores extends AppCompatActivity {
 
         SharedPreferences sf = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
+
+        //Set the progress for Environment
         env = findViewById(R.id.enviornment);
         envscore = findViewById(R.id.envscore);
         int env_score = sf.getInt(getString(R.string.env_score),0);
         env.setProgress(env_score);
         envscore.setText(String.valueOf(env_score) + "/100");
 
+        //Set the progress for global warming
         glo_war = findViewById(R.id.global_warming);
         gwscore = findViewById(R.id.gwscore);
         int gw_score = sf.getInt(getString(R.string.global_warming_score),0);
         glo_war.setProgress(gw_score);
         gwscore.setText(String.valueOf(gw_score) + "/100");
 
+        //Set the progress for Water Crisis
         water_cr = findViewById(R.id.water_crisis);
         wcscore = findViewById(R.id.wcscore);
         int wc_score = sf.getInt(getString(R.string.water_crisis_score),0);
         water_cr.setProgress(wc_score);
         wcscore.setText(String.valueOf(wc_score) + "/100");
 
+        //Set the progress for Water Pollution
         water_poll = findViewById(R.id.water_pollution);
         wpscore = findViewById(R.id.wpscore);
         int wp_score = sf.getInt(getString(R.string.water_pollution_score),0);

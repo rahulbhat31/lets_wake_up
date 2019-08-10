@@ -51,10 +51,12 @@ public class TopicVideoPage extends AppCompatActivity {
         WebView youtubeWebView = findViewById(R.id.youtube_web_view);
         WebSettings youtubeSettings = youtubeWebView.getSettings();
 
+        // video links
         String env_save = "Vkq_srFGW5I";
         String global_save = "gUhxcdzRgLQ";
         String wat_poll_save = "sYIoPIstObU";
         String water_cri_save = "DgGlVqZkB8A";
+
         profile = (ImageView)findViewById(R.id.avatar);
 
         name = findViewById(R.id.userName);
@@ -102,6 +104,8 @@ public class TopicVideoPage extends AppCompatActivity {
 
         typeText.setText(topic);
 
+
+        // settings for the webView
         youtubeSettings.setJavaScriptEnabled(true);
         youtubeSettings.setLoadWithOverviewMode(true);
         youtubeSettings.setUseWideViewPort(true);
@@ -112,6 +116,10 @@ public class TopicVideoPage extends AppCompatActivity {
 
         get_quest = findViewById(R.id.get_quest);
 
+
+        //Checks for the current section and if the user has
+        // completed the section if not gets the current question the user
+        // is on
         get_quest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -180,6 +188,7 @@ public class TopicVideoPage extends AppCompatActivity {
     }
 
 
+    // Get the Normal question number the user is currently on for a specific section
     private void getQuestionNumber(){
 
         if(topic.equals(getString(R.string.environment)))
@@ -207,6 +216,7 @@ public class TopicVideoPage extends AppCompatActivity {
     }
 
 
+    // Returns true if the section is completed
     private void checkSectionCompleted(){
 
         if(topic.equals(getString(R.string.environment)))
@@ -240,6 +250,8 @@ public class TopicVideoPage extends AppCompatActivity {
         finish();
     }
 
+
+    // Get the Image question number the user is currently on for a specific section
     private void setQuestionNumberForImageQuestion(){
         if(questionNumber > 2)
         {

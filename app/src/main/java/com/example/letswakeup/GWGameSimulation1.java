@@ -44,6 +44,8 @@ public class GWGameSimulation1 extends AppCompatActivity {
         plasticBagImg = (ImageView) findViewById(R.id.plasticBagImgID);
         gameScoreTxt = (TextView) findViewById(R.id.waterPollGSID);
 
+        // To remove the object on click and increase the score.
+        // Also check if the game is finished or no
         plasticBagImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,11 +56,6 @@ public class GWGameSimulation1 extends AppCompatActivity {
                     gwTutorialTxt.setText("You got it all right!!");
                     increaseScore();
                     setSectionCompleted();
-                    try {
-                        TimeUnit.SECONDS.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType.toString());
                     startActivity(intent);
@@ -71,7 +68,8 @@ public class GWGameSimulation1 extends AppCompatActivity {
             }
         });
 
-
+        // To remove the object on click and increase the score.
+        // Also check if the game is finished or no
         plasticBottleImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,11 +80,6 @@ public class GWGameSimulation1 extends AppCompatActivity {
                     gwTutorialTxt.setText("You got it all right!!");
                     increaseScore();
                     setSectionCompleted();
-                    try {
-                        TimeUnit.SECONDS.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     Intent intent = new Intent(GWGameSimulation1.this, EndPage.class);
                     intent.putExtra(getString(R.string.question_type), questionType.toString());
                     startActivity(intent);
@@ -100,6 +93,8 @@ public class GWGameSimulation1 extends AppCompatActivity {
 
     }
 
+
+    // To increase the score based on the section
     private void increaseScore()
     {
         SharedPreferences.Editor sEditor = sPreference.edit();
@@ -125,12 +120,14 @@ public class GWGameSimulation1 extends AppCompatActivity {
     }
 
 
+    // update the score text on screens
     private void updateScoreOnScreen(){
         gameScore = gameScore +1;
         String gameScoreStr = gameScore + "/ " +totalScore;
         gameScoreTxt.setText(gameScoreStr);
     }
 
+    // If game completed set the game completed flag for that section
     private void setSectionCompleted(){
         SharedPreferences.Editor sEditor = sPreference.edit();
 

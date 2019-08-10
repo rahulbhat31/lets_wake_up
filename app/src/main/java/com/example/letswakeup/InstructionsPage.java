@@ -92,4 +92,11 @@ public class InstructionsPage extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(InstructionsPage.this, HomePage.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
